@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Higgsy's Character Sheet Maker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/tutorialSheets.js"></script>
+  <script src="src/model/sheetStats.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script> $.ajax({
+      type: 'GET',
+      url: 'sampleCharSheet.json',
+      mimeType: 'application/json',
+      dataType: 'json',
+      crossDomain:true,
+      success: function(data) {loadStorage(data)},
+      data: {},
+      async: false
+  });</script>
+  <script> $.ajax({
+      type: 'GET',
+      url: 'styleBible.json',
+      mimeType: 'application/json',
+      dataType: 'json',
+      crossDomain:true,
+      success: function(data) {loadBible(data)},
+      data: {},
+      async: false
+  });</script>
+  <script src="src/view/sheetLogic.js"></script>
+
+  <script>
+   window.addEventListener( "load", sheetProj.view.sheetLogic.setupUserInterface);
+  </script>
+</head>
+
+<style>
+
+/* Animations */
+/* ------------------------------ */
+@keyframes shimmer {
+  0%   {bottom:0em;}
+  25% {bottom:.25em;}
+  50%  {background-color: white; background-image: linear-gradient(to bottom, purple, white); bottom:.5em;}
+  75% {bottom:.25em;}
+  100% {bottom:0em;}
+}
+
+.shimmering{
+  animation:shimmer 2s infinite;
+}
+
+.draggable{
+}
+
+.layer0{
+  z-index:0 !important;
+}
+.layer1{
+  z-index:1 !important;
+}
+.layer2{
+  z-index:2 !important;
+}
+.layer3{
+  z-index:3 !important;
+}
+.layer4{
+  z-index:4 !important;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  cursor: pointer; /* Add a pointer on hover */
+  overflow:auto;
+  z-index:1;
+  }
+
+  #printOverlay{
+    z-index:2;
+  }
+
+.collapsed{
+  width:1vw !important;
+  /* transition: width .5s ease-in; */
+}
+
+body{
+  overflow:auto;
+  background-image:url("https://res.cloudinary.com/metaverse/image/upload/v1538327889/Backgrounds/zwartevilt__2X.jpg");
+  background-size:cover;
+}
+
+.testBox{
+  background-color: #f1f1f1;
+  /* border: 1px solid #d3d3d3; */
+  z-index:1;
+  width:100px;
+  height:100px;
+  top:50%;
+  left:50%;
+  position:absolute;
+  box-shadow:7px 9px 4px rgba(0, 0, 0, 0.5);
+  overflow:hidden;
+}
+
+.locked{
+  box-shadow:inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4) !important;
+}
+
+.charSheet{
+  /* height:100vh;
+  width:70vw; */
+  height:842px;
+  width: 595px;
+  position:absolute;
+  margin-left: 30vw;
+  margin-right:5vw;
+  margin-top:45px;
+  background-color:white;
+  border-radius:1%;
+  /* z-index:0; */
+  overflow:hidden;
+}
+
+#palette{
+  height:100vh;
+  width:15vw;
+  position:absolute;
+  /* bottom:0; */
+  right:0;
+
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #999999, #CCCCCC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #999999, #CCCCCC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius:1%;
+
+  transition: width .5s ease-in;
+  margin-top:15px;
+}
+
+.collapseButton{
+  border: 2px solid #d3d3d3;
+  background-color:silver;
+  position:absolute;
+  width:1vw;
+  height:4vw;
+  top:50%;
+  left:-.5vw;
+  word-wrap: break-word;
+  overflow:hidden;
+}
+
+.collapseButton:hover{
+  background-color:white;
+}
+
+.boxTitle{
+  background-color:black;
+  color:white;
+  height:30%;
+  width:100%;
+  text-align:center;
+  position: absolute;
+  top:0;
+}
+
+.label{
+  background-color:black;
+  color:white;
+  height:100%;
+  width:100%;
+  text-align:center;
+  position: absolute;
+}
+
+.testInput{
+  width:100%;
+  background-color:silver;
+  height:80%;
+  position: absolute;
+  bottom:0;
+}
+
+.charSquare{
+  border:solid;
+  border-color:#461F00;
+  background-color:#8C6546;
+  border-radius:1%;
+}
+
+.baseInput{
+  width:50%;
+  background-color:white;
+  height:70%;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+
+.finalMod{
+  width:50%;
+  background-color:grey;
+  height:70%;
+  position: absolute;
+  bottom:0;
+  right:0;
+}
+
+#htmlPalette{
+  /* display:none; */
+  position:absolute;
+}
+
+#imgPalette{
+  display:none;
+  position:absolute;
+}
+
+#draggableDescription{
+
+}
+
+
+
+#spawnPalette{
+  height:30%;
+  /* background-color:black; */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  overflow:auto;
+}
+
+.imgSlot{
+  box-shadow:inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+  border-style: solid;
+  border-width: thin;
+  border-color:silver;
+  border-radius:1%;
+  height:50px;
+  width:50px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+
+/* .sampleImg{
+  object-fit: contain;
+} */
+
+.imgSlot:hover{
+  border-color:gold;
+}
+
+.invisible{
+  display:none;
+}
+
+.noHeight{
+  height:0 !important;
+}
+
+#spawnPaletteTitle{
+  color:white;
+  font-size:1.5em;
+  text-align:center;
+}
+
+#draggableInfo{
+  height:40%;
+  width:100%;
+  overflow:auto;
+  padding-top:20px;
+}
+
+#printScreen{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#creditPage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80vh;
+  width:60vw;
+  background-color:#F5DEB3;
+  border-top-left-radius: 4%;
+  border-top-right-radius:4%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  overflow:auto;
+}
+
+#drawDisplay{
+  position:absolute;
+  left:10px;
+  bottom:50px;
+  height:30vh;
+  width:15vw;
+
+
+
+}
+
+#drawTitle{
+  height:20%;
+  width:15vw;
+  border:solid;
+  overflow:hidden;
+  background: silver;
+
+
+  text-align:center;
+
+}
+
+#drawBody{
+  height:80%;
+  width:15vw;
+  border:solid;
+  border-color:black;
+  overflow:auto;
+  background: silver;
+  color:black;
+  transition: height .5s ease-in;
+}
+
+.receiverBorder{
+  border-style:groove;
+  border-width:thick;
+  border-color:gold;
+}
+
+.sourceBorder{
+  border-style:dashed;
+  border-width:thick;
+  border-color:green;
+}
+
+.bannedBorder{
+  border-style:dashed;
+  border-width:thick;
+  border-color:red;
+}
+
+#hintBox{
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #999999, #CCCCCC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #999999, #CCCCCC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color:black;
+  position:absolute;
+  left:10px;
+  bottom:50vh;
+  height:35vh;
+  width:15vw;
+  border-radius:1%;
+  font-size:1.25em;
+  /* font-size: 1vmax; */
+  overflow:auto;
+  padding:1%;
+}
+
+.darkWoodBtn{
+  background-color:#461F00;
+  color:white;
+}
+.darkWoodBtn:disabled{
+  background-color:grey;
+  color:black;
+}
+.darkWoodBtn:disabled:hover{
+  background-color:grey;
+  color:black;
+}
+
+.trayButton{
+  border-style: solid;
+  border-color:silver;
+  border-width: thin;
+  box-shadow: inset 2px 2px 1px rgba(255, 255, 255, .4), inset -2px -2px 1px rgba(0, 0, 0, .4);
+  cursor:pointer;
+}
+.trayButton:hover{
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, .8)
+}
+.trayButton:disabled:hover{
+  box-shadow: inset 2px 2px 1px rgba(255, 255, 255, .4), inset -2px -2px 1px rgba(0, 0, 0, .4);
+  cursor:default;
+}
+.trayButton:disabled:active{
+  box-shadow: inset 2px 2px 1px rgba(255, 255, 255, .4), inset -2px -2px 1px rgba(0, 0, 0, .4);
+}
+.trayButton:active{
+  box-shadow:inset 25px 25px 20px rgba(255, 255, 255, .6);
+  cursor:pointer;
+}
+
+.lightWoodBtn{
+  background-color:#8C6546;
+  color:black;
+}
+.lightWoodBtn:disabled{
+  background-color:grey;
+  color:black;
+}
+.lightWoodBtn:disabled:hover{
+  background-color:grey;
+  color:black;
+}
+
+
+</style>
+<body>
+  <div id="hintBox">
+    Congratulations, you are now the proud owner of a Higgsy certified Modular Character Sheet.  Double click a draggable to lock/unlock it.  When unlocked you can drag it around the sheet or tug at its bottom/right border to resize it.
+  </div>
+  <div id="drawDisplay">
+    <div id="drawTitle" class="tabHead">Set Stat Relationships</div>
+    <div id="drawBody">
+      <table style="width:100%">
+        <tr>
+          <td colspan=2 align="center"><button onclick="toggleDrawOverlay()">Toggle Relationship View</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="activeSheet" class="charSheet">
+
+  </div>
+  <div id="palette" class="container-fluid no-gutters">
+
+    <div id="draggableInfo">
+
+    </div>
+
+    <hr>
+
+    <div class="row mr-2 ml-2 mt-4" id="spawnPalette">
+      <div class="col-12" id="spawnPaletteTitle">Draggable Palette</div>
+      <hr>
+    </div>
+
+    <hr>
+
+    <div class="row m-2">
+      <button style="background-color: #ede9e9" class="lightWoodBtn trayButton col-4 offset-1" onclick="saveActivePage()">Save</button>
+      <button style="background-color: #ede9e9" class="lightWoodBtn trayButton col-4 offset-1" onclick="printSheet()">Print</button>
+
+    </div>
+    <div class="row m-2">
+      <button style="background-color:#154360" class="darkWoodBtn trayButton col-4 offset-1" onclick="clearSheet()">Clear Sheet</button>
+      <button class="lightWoodBtn trayButton col-4 offset-1" onclick="getJSON()">Settings</button>
+    </div>
+    <div class="row m-2">
+      <button style="background-color:#154360" class="darkWoodBtn trayButton col-4 offset-1" onclick="resetTutorial()">Tutorial</button>
+      <button class="lightWoodBtn trayButton col-4 offset-1" onclick="toggleCredits()">Credits</button>
+    </div>
+    <div class="row m-2">
+      <button style="background-color:#750d02" class="darkWoodBtn trayButton col-5 offset-3" onclick="resetStorage()">Reset Data!</button>
+    </div>
+
+
+    <div class="collapseButton">>>>>>>>></div>
+  </div>
+
+  <div id="htmlPalette">
+  </div>
+
+  <div id="printOverlay" class="overlay invisible">
+    <div id="printScreen"></div>
+    <button  style="Margin:10px; background-color:pink;" onclick="closeParentOverlay(event)">Close Print Screen</button>
+  </div>
+  <div id="drawOverlay" class="overlay invisible">
+
+  </div>
+  <div id="creditsOverlay" class="overlay invisible">
+    <div id="creditPage" class="container">
+      <div class="row" id="creditsTitle">
+        <div class="col-3" style="font-size:5vw;">Credits:</div>
+      </div>
+      <hr>
+      Note: artist links open in a new tab.  Art has been resized from the originals to fit their current use and is only used either with direct artist permission or when the use of said art is made available to the public as part of the creative commons.  (If you would like your art to be removed please contact me at: Ssonson@alumni.nd.edu)
+
+      <div class="row" id="artTitle">
+        <div class="col-3" style="font-size:2vw;">Character Art:</div>
+      </div>
+      <hr>
+
+      <div class="row" id="artCredits">
+          <ul class="col-11 offset-1">
+            <li><img class="charSquare" src="https://res.cloudinary.com/metaverse/image/upload/v1541010546/Avatars/Higgsy/side_higgsLaugh.png" style="height:5vw; width:5vw;" alt="Higgsy"> Created by: <a href="https://lemmasoft.renai.us/forums/viewtopic.php?f=52&t=48688&p=480951&hilit=female+sprite#p480951" rel="noopener noreferrer" target="_blank">GrammaHobbes</a></li>
+          </ul>
+        </div>
+
+        <div class="row" id="iconTitle">
+          <div class="col-3" style="font-size:2vw;">Icons/assets:</div>
+        </div>
+        <hr>
+
+      <div class="row" id="iconCredits">
+        <ul class="col-11 offset-1">
+
+          <li><img class="charSquare" src="https://res.cloudinary.com/metaverse/image/upload/v1538327889/Backgrounds/zwartevilt__2X.jpg" style="height:5vw; width:5vw;" alt="Paper"> Background from : <a href="https://www.toptal.com/designers/subtlepatterns/?s=zwartevilt" rel="noopener noreferrer" target="_blank">Toptal Subtle Patterns</a></li>
+        </ul>
+      </div>
+
+      <div class="row" id="sfxTitle">
+        <div class="col-3" style="font-size:2vw;">SFX:</div>
+      </div>
+      <hr>
+
+      <!-- class="row pl-4" -->
+      <div class="col-11 offset-1" id="sfxCredits">
+        This page intentionally left silent.
+      </div>
+
+      <div class="row" id="otherTitle">
+        <div class="col-3" style="font-size:2vw;">Other/Contact:</div>
+      </div>
+      <hr>
+
+      <div class="row pl-4" id="otherCredits">
+      </div>
+
+      <div class="row pl-4" id="contactCredits">
+        <p class="col-11 offset-1">You can find this project on github at:</p>
+
+        <p class="col-11 offset-1"> If you found this project on Reddit and want to get in touch with me there you can find my account here:</p>
+
+        <p class="col-11 offset-1">You can get in touch with me directly at: Ssonson@alumni.nd.edu</p><br>
+      </div>
+
+    </div>
+    <button class="darkWoodBtn" onclick="closeParentOverlay(event)" style="margin:10px;">Close Credits Screen</button>
+  </div>
+  <!-- <div id="hackyLocalStorage">
+    <input class="invisible" id="selectedDraggable" value="68">
+  </div> -->
+</body>

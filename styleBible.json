@@ -1,0 +1,22 @@
+{
+  "0": {"id":0,
+      "name":"Island",
+      "description":"It is an island onto itself.  This style comes with a label attached and an input field to store either text or numbers.  While you can wire it to dynamically affect other fields it cannot be affected by outside forces.",
+      "html":"<div id='temporary' class=\"testBox draggable\"><input class=\"boxTitle\" onchange='changeTitle(this)'><input class=\"baseInput\" style='width:100%;' onchange='changeValue(this)'></div>"
+    },
+  "1": {"id":1,
+      "name":"Label",
+      "description":"Has no slot for values, this remains useful for labeling your sheet for better readability.",
+      "html":"<div id='temporary' class=\"testBox draggable\"><input class=\"label\" onchange='changeTitle(this)'></div>"
+    },
+  "2": {"id":2,
+      "name":"Dynamic",
+      "description":"Has an attched label but more importantly it has both an input field AND a section where the stat's modified value can be shown.  This allows it to dynamically update itself based on changes elsewhere on the character sheet.  Note that this feature requires the input to be in numerical form.",
+      "html":"<div id='temporary' class='testBox draggable'><input class='boxTitle' onchange='changeTitle(this)'><input class='baseInput' onchange='changeValue(this)'><input readonly class='finalMod'></div>"
+    },
+  "3": {"id":3,
+      "name":"Dynamic, labelless",
+      "description":"Functions identically to the Dynamic model but does not have a label.",
+      "html":"<div id='temporary' class='testBox draggable'><input class='baseInput' style='height:100%' onchange='changeValue(this)'><input style='height:100%' readonly class='finalMod'></div>"
+    }
+}

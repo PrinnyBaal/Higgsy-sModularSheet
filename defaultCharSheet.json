@@ -1,0 +1,35 @@
+{
+  "draggables":{
+    "0":{
+      "id":0,
+      "name":"HP",
+      "uiName":"Unnamed",
+      "value":"75",
+      "finalAblScore":0,
+      "finalMod":0,
+      "drawsFrom":[],
+      "activeRules":[],
+      "height":50,
+      "width":50,
+      "top":"50%",
+      "left":"50%",
+      "locked":false,
+      "bibleRef":0
+    }
+  },
+  "rules":{
+    "abilityScores":{
+      "id":0,
+      "name":"Ability Scores",
+      "description":"Ability scores work a little differently than most other stats in Pathfinder as the modifier they offer isn't their final score.  For example a 12 Strength translates to a modifier of +1.",
+      "label":"abilityScore"
+    },
+    "classSkill":{
+      "id":1,
+      "name":"Class Skill",
+      "description":"In Pathfinder certain skills are considered to be 'in class', essentially meaning that your character has an innate aptitude toward this skill.  If a skill is in class the first rank placed in that skill (a base input of at least 1) will give a +3 bonus.",
+      "label":"classSkill"
+    }
+
+  }
+}

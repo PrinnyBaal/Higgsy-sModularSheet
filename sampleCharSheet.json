@@ -1,0 +1,761 @@
+{
+  "draggables": {
+    "0": {
+      "id": "0",
+      "name": "Ron the Sample Barbarian",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "47px",
+      "width": "311px",
+      "top": "5px",
+      "left": "145px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "1": {
+      "id": "1",
+      "name": "STR",
+      "uiName": "Strength",
+      "value": "18",
+      "finalAblScore": 18,
+      "finalMod": 4,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "61px",
+      "width": "55px",
+      "top": "691px",
+      "left": "21px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "2": {
+      "id": "2",
+      "name": "WIS",
+      "uiName": "Wisdom",
+      "value": "12",
+      "finalAblScore": 12,
+      "finalMod": 1,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "54px",
+      "width": "56px",
+      "top": "759px",
+      "left": "91px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "3": {
+      "id": "3",
+      "name": "CON",
+      "uiName": "Constitution",
+      "value": "14",
+      "finalAblScore": 14,
+      "finalMod": 2,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "62px",
+      "width": "57px",
+      "top": "691px",
+      "left": "162px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "4": {
+      "id": "4",
+      "name": "INT",
+      "uiName": "Intelligence",
+      "value": "10",
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "50px",
+      "width": "53px",
+      "top": "760px",
+      "left": "20px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "5": {
+      "id": "5",
+      "name": "DEX",
+      "uiName": "Dexterity",
+      "value": "13",
+      "finalAblScore": 13,
+      "finalMod": 1,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "63px",
+      "width": "56px",
+      "top": "690px",
+      "left": "92px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "6": {
+      "id": "6",
+      "name": "CHA",
+      "uiName": "Charisma",
+      "value": "10",
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "drawsFrom": [],
+      "activeRules": [
+        "abilityScore"
+      ],
+      "height": "49px",
+      "width": "56px",
+      "top": "760px",
+      "left": "162px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "7": {
+      "id": "7",
+      "name": "BAB",
+      "uiName": "Base Attack Bonus",
+      "value": "1",
+      "finalAblScore": 0,
+      "finalMod": 1,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "59px",
+      "width": "55px",
+      "top": "722px",
+      "left": "236px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "8": {
+      "id": "8",
+      "name": "Will",
+      "uiName": "Will",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "58px",
+      "width": "65px",
+      "top": "99px",
+      "left": "518px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "9": {
+      "id": "9",
+      "name": "Ref",
+      "uiName": "Reflex",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "60px",
+      "width": "59px",
+      "top": "97px",
+      "left": "447px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "10": {
+      "id": "10",
+      "name": "Fort",
+      "uiName": "Fortitude",
+      "value": "2",
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "57px",
+      "width": "65px",
+      "top": "99px",
+      "left": "372px",
+      "locked": true,
+      "bibleRef": "2",
+      "description": ""
+    },
+    "11": {
+      "id": "11",
+      "name": "Initiative",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 1,
+      "drawsFrom": [
+        [
+          "5",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "111px",
+      "width": "106px",
+      "top": "528px",
+      "left": "6px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "12": {
+      "id": "12",
+      "name": "Stats",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "32px",
+      "width": "292px",
+      "top": "653px",
+      "left": "10px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "13": {
+      "id": "13",
+      "name": "Saving Throws",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "37px",
+      "width": "211px",
+      "top": "57px",
+      "left": "379px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "14": {
+      "id": "14",
+      "name": "Misc",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "43px",
+      "width": "309px",
+      "top": "475px",
+      "left": "8px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "15": {
+      "id": "15",
+      "name": "CMB",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "drawsFrom": [
+        [
+          "7",
+          1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "62px",
+      "width": "65px",
+      "top": "522px",
+      "left": "125px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "16": {
+      "id": "16",
+      "name": "CMD",
+      "uiName": "Unnamed",
+      "value": "10",
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "drawsFrom": [
+        [
+          "1",
+          1
+        ],
+        [
+          "5",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "63px",
+      "width": "70px",
+      "top": "587px",
+      "left": "122px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "17": {
+      "id": "17",
+      "name": "Gear",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "47px",
+      "width": "261px",
+      "top": "473px",
+      "left": "325px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "18": {
+      "id": "18",
+      "name": "Large Bastard Sword",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "39px",
+      "width": "155px",
+      "top": "522px",
+      "left": "423px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "19": {
+      "id": "19",
+      "name": "Shortbow",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "37px",
+      "width": "88px",
+      "top": "566px",
+      "left": "486px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "20": {
+      "id": "20",
+      "name": "Torches",
+      "uiName": "Unnamed",
+      "value": "5 ",
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "54px",
+      "width": "61px",
+      "top": "527px",
+      "left": "323px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "21": {
+      "id": "21",
+      "name": "Arrows",
+      "uiName": "Unnamed",
+      "value": "50 ",
+      "finalAblScore": 0,
+      "finalMod": 50,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "56px",
+      "width": "58px",
+      "top": "588px",
+      "left": "324px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "22": {
+      "id": "22",
+      "name": "Padded Armor",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "41px",
+      "width": "116px",
+      "top": "609px",
+      "left": "467px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "23": {
+      "id": "23",
+      "name": "HP",
+      "uiName": "Unnamed",
+      "value": "15",
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "80px",
+      "width": "83px",
+      "top": "63px",
+      "left": "15px",
+      "locked": true,
+      "bibleRef": "0"
+    },
+    "24": {
+      "id": "24",
+      "name": "Touch",
+      "uiName": "Unnamed",
+      "value": "10",
+      "finalAblScore": 0,
+      "finalMod": 11,
+      "drawsFrom": [
+        [
+          "5",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "66px",
+      "width": "65px",
+      "top": "162px",
+      "left": "88px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "25": {
+      "id": "25",
+      "name": "Flat",
+      "uiName": "Unnamed",
+      "value": "12",
+      "finalAblScore": 0,
+      "finalMod": 12,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "66px",
+      "width": "58px",
+      "top": "163px",
+      "left": "164px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "26": {
+      "id": "26",
+      "name": "AC",
+      "uiName": "Unnamed",
+      "value": "12",
+      "finalAblScore": 0,
+      "finalMod": 13,
+      "drawsFrom": [
+        [
+          "5",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "89px",
+      "width": "92px",
+      "top": "63px",
+      "left": "116px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "27": {
+      "id": "27",
+      "name": " To-hit",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "drawsFrom": [
+        [
+          "1",
+          1
+        ],
+        [
+          "7",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "106px",
+      "width": "154px",
+      "top": "326px",
+      "left": "6px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "28": {
+      "id": "28",
+      "name": "Dmg",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "drawsFrom": [
+        [
+          "1",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "104px",
+      "width": "105px",
+      "top": "327px",
+      "left": "168px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "29": {
+      "id": "29",
+      "name": "Greatsword",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "49px",
+      "width": "274px",
+      "top": "266px",
+      "left": "9px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "30": {
+      "id": "30",
+      "name": "Skills",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "42px",
+      "width": "220px",
+      "top": "187px",
+      "left": "349px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "31": {
+      "id": "31",
+      "name": "Active Abilities",
+      "uiName": "Unnamed",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "39px",
+      "width": "236px",
+      "top": "653px",
+      "left": "330px",
+      "locked": true,
+      "bibleRef": "1"
+    },
+    "32": {
+      "id": "32",
+      "name": "Rage (6/day)",
+      "uiName": "Rage",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "43px",
+      "width": "109px",
+      "top": "704px",
+      "left": "326px",
+      "locked": true,
+      "bibleRef": "1",
+      "description": "While in rage, a barbarian gains a +4 morale bonus to her Strength and Constitution, as well as a +2 morale bonus on Will saves. In addition, she takes a –2 penalty to Armor Class. The increase to Constitution grants the barbarian 2 hit points per Hit Dice, but these disappear when the rage ends and are not lost first like temporary hit points. While in rage, a barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration. A barbarian can end her rage as a free action and is fatigued after rage for a number of rounds equal to 2 times the number of rounds spent in the rage. A barbarian cannot enter a new rage while fatigued or exhausted but can otherwise enter rage multiple times during a single encounter or combat. If a barbarian falls unconscious, her rage immediately ends, placing her in peril of death."
+    },
+    "33": {
+      "id": "33",
+      "name": "Power Attack",
+      "uiName": "Power Attack",
+      "value": "",
+      "finalAblScore": 0,
+      "finalMod": null,
+      "drawsFrom": [],
+      "activeRules": [],
+      "height": "43px",
+      "width": "114px",
+      "top": "704px",
+      "left": "447px",
+      "locked": true,
+      "bibleRef": "1",
+      "description": "You can choose to take a –1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (–50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by –1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage."
+    },
+    "34": {
+      "id": "34",
+      "name": "Sense Motive",
+      "uiName": "Unnamed",
+      "value": "1",
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "drawsFrom": [
+        [
+          "2",
+          1
+        ]
+      ],
+      "activeRules": [],
+      "height": "65px",
+      "width": "106px",
+      "top": "382px",
+      "left": "313px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "35": {
+      "id": "35",
+      "name": "Acrobatics",
+      "uiName": "Unnamed",
+      "value": "1",
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "drawsFrom": [
+        [
+          "5",
+          1
+        ]
+      ],
+      "activeRules": [
+        "classSkill"
+      ],
+      "height": "65px",
+      "width": "113px",
+      "top": "233px",
+      "left": "447px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "36": {
+      "id": "36",
+      "name": "Perception",
+      "uiName": "Unnamed",
+      "value": "1",
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "drawsFrom": [
+        [
+          "2",
+          1
+        ]
+      ],
+      "activeRules": [
+        "classSkill"
+      ],
+      "height": "69px",
+      "width": "100px",
+      "top": "235px",
+      "left": "321px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "37": {
+      "id": "37",
+      "name": "Climb",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "drawsFrom": [
+        [
+          "1",
+          1
+        ]
+      ],
+      "activeRules": [
+        "classSkill"
+      ],
+      "height": "60px",
+      "width": "97px",
+      "top": "315px",
+      "left": "314px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "38": {
+      "id": "38",
+      "name": "Intimidate",
+      "uiName": "Unnamed",
+      "value": "0",
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "drawsFrom": [
+        [
+          "6",
+          1
+        ]
+      ],
+      "activeRules": [
+        "classSkill"
+      ],
+      "height": "68px",
+      "width": "103px",
+      "top": "309px",
+      "left": "457px",
+      "locked": true,
+      "bibleRef": "2"
+    },
+    "39": {
+      "id": "39",
+      "name": "Craft (Stick)",
+      "uiName": "Craft (Stick)",
+      "value": "1",
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "drawsFrom": [
+        [
+          "4",
+          1
+        ]
+      ],
+      "activeRules": [
+        "classSkill"
+      ],
+      "height": "67px",
+      "width": "114px",
+      "top": "385px",
+      "left": "451px",
+      "locked": true,
+      "bibleRef": "2",
+      "description": "To make sticks for Becky."
+    }
+  },
+  "rules": {
+    "abilityScores": {
+      "id": 0,
+      "name": "Ability Scores",
+      "description": "Ability scores work a little differently than most other stats in Pathfinder as the modifier they offer isn't their final score. For example a 12 Strength translates to a modifier of +1.",
+      "label": "abilityScore"
+    },
+    "classSkill": {
+      "id": 1,
+      "name": "Class Skill",
+      "description": "In Pathfinder certain skills are considered to be 'in class', essentially meaning that your character has an innate aptitude toward this skill. If a skill is in class the first rank placed in that skill (a base input of at least 1) will give a +3 bonus.",
+      "label": "classSkill"
+    }
+  }
+}
