@@ -13,9 +13,76 @@ sheetProj.view.sheetLogic = {
     }
 };
 
+let pageNavi={
+  nextPage:function(){
+    saveActivePage();
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    if (chara.activePage+1<chara.totalPages){
+      chara.activePage++;
+      if (!chara.activePage+1<chara.totalPages){
+        $("forwardPageButton").prop( "disabled", true );
+      }
+    }
+    console.log(`Welcome to page ${chara.activePage}`);
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    loadSheet();
+    restoreHighlights(sheet.draggables);
+
+  },
+  prevPage:function(){
+    saveActivePage();
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    if (chara.activePage>0){
+      chara.activePage--;
+      if (chara.activePage<=0){
+        $("reversePageButton").prop( "disabled", true );
+      }
+    }
+    console.log(`Welcome to page ${chara.activePage}`);
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    loadSheet();
+    restoreHighlights(sheet.draggables);
+  },
+  spawnPage:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    chara.totalPages++;
+    console.log(`Welcome our new page ${chara.totalPages}`);
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+  },
+  destroyPage:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    for (let key in sheet.draggables){
+      let elem=sheet.draggables[key];
+      if (elem.page==chara.activePage){
+        delete sheet.draggables[key];
+      }
+    }
+    chara.totalPages--;
+    chara.activePage--;
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    loadSheet();
+    restoreHighlights(sheet.draggables);
+  }
+}
+
 function setClicks(){
   $(".collapseButton").click(collapseParent);
   $(".tabHead").click(collapseTabBody);
+  $("#reversePageButton").click(pageNavi.prevPage);
+  $("#forwardPageButton").click(pageNavi.nextPage);
+  $("#spawnPage").click(pageNavi.spawnPage);
+  $("#deletePage").click(pageNavi.destroyPage);
 }
 
 function collapseTabBody(event){
@@ -32,9 +99,14 @@ function loadSheet(){
   let sheet=chara.charSheets[chara.activeSheet];
 
   let styleBible=JSON.parse(localStorage.getItem("styleBible"));
-
+  $(".draggable").remove();
   for (var key in sheet.draggables){
+
     let elem=sheet.draggables[key];
+    if (elem.page != chara.activePage){
+
+      continue;
+    }
 
     $("#htmlPalette").html(styleBible[elem.bibleRef].html);
     $("#temporary").css({ 'left': `${elem.left}`, 'top': `${elem.top}`,'width': `${elem.width}`, 'height': `${elem.height}`});
@@ -60,6 +132,7 @@ function loadSheet(){
     $("#htmlPalette").empty();
   }
 
+
 }
 
 function saveActivePage(){
@@ -81,6 +154,7 @@ function saveActivePage(){
     currDrag.left=currDiv.style.left;
   }
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
+  console.log(sheet.draggables);
 }
 
 function collapseParent(e){
@@ -112,6 +186,7 @@ function newBox(event){
 
   let newDraggable={
         "id":`${newID(sheet.draggables)}`,
+        "page":chara.activePage,
         "name":"Title",
         "uiName":"Unnamed",
         "value":"",
@@ -471,6 +546,7 @@ function toggleDrawOverlay(){
 
   $("#drawOverlay").toggleClass("invisible");
   $("#drawDisplay").toggleClass("layer4");
+  $("#pageNavigation").toggleClass("layer4");
   if ($("#drawOverlay").hasClass("invisible")){
     newHint("Double click a draggable to lock/unlock it.  When unlocked you can drag it around the sheet or tug at its bottom/right border to resize it.  Want to add a new draggable?  Just click one of the options from the box on the right labeled 'Draggable Palette'");
     popBubbles();
@@ -480,6 +556,23 @@ function toggleDrawOverlay(){
   }
   else{
     newHint("Some draggables can update their final values by referencing the value of other draggables.  I've highlighted the ones capable of this, pick one now to edit its references.");
+    bubbleReceptiveDivs();
+  }
+
+}
+
+function restoreHighlights(draggables){
+  if ($("#drawOverlay").hasClass("invisible")){return;}
+
+  let targetID=JSON.parse(localStorage.getItem("targetSelected"));
+  if (targetID!==false){
+    let targetElem=$(`#${targetID}`);
+    bubbleSenderDivs(targetID);
+    highlightSendingDivs(draggables[targetID].drawsFrom);
+    $(targetElem).addClass("receiverBorder");
+    $(targetElem).addClass("layer4");
+  }
+  else{
     bubbleReceptiveDivs();
   }
 
@@ -515,8 +608,10 @@ function drawSelect(e){
       stripBorders();
       bubbleReceptiveDivs();
       $("#drawDisplay").addClass("layer4");
+      $("#pageNavigation").addClass("layer4");
       localStorage.setItem("targetSelected", false);
       newHint("What's the difference between draggables that can or can't be selected in this phase?  It's the grey box. No use dynamically updating a value that won't be displayed, ya know?");
+      insertDrawSlots([]);
     }
 
 
@@ -540,11 +635,12 @@ function drawSelect(e){
     bubbleSenderDivs(targetID);
     highlightSendingDivs(draggables[targetID].drawsFrom);
     $("#drawDisplay").addClass("layer4");
+    $("#pageNavigation").addClass("layer4");
     $(targetElem).addClass("receiverBorder");
     $(targetElem).addClass("layer4");
     localStorage.setItem("targetSelected", targetID);
     insertDrawSlots(draggables[targetID].drawsFrom);
-      newHint("Gold border=selected.\nNo border=selectable.\nGreen Border=already selected.\nRed Border=will cause an error if selected since it's already basing ITS value on your selected draggable.");
+    newHint("Gold border=selected.\nNo border=selectable.\nGreen Border=already selected.\nRed Border=will cause an error if selected since it's already basing ITS value on your selected draggable.");
   }
 
   function insertDrawSlots(drawSources){

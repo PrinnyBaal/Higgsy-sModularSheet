@@ -2,6 +2,7 @@
   "draggables": {
     "0": {
       "id": "0",
+      "page":0,
       "name": "Ron the Sample Barbarian",
       "uiName": "Unnamed",
       "value": "",
@@ -18,6 +19,7 @@
     },
     "1": {
       "id": "1",
+      "page":0,
       "name": "STR",
       "uiName": "Strength",
       "value": "18",
@@ -36,6 +38,7 @@
     },
     "2": {
       "id": "2",
+      "page":0,
       "name": "WIS",
       "uiName": "Wisdom",
       "value": "12",
@@ -54,6 +57,7 @@
     },
     "3": {
       "id": "3",
+      "page":0,
       "name": "CON",
       "uiName": "Constitution",
       "value": "14",
@@ -72,6 +76,7 @@
     },
     "4": {
       "id": "4",
+      "page":0,
       "name": "INT",
       "uiName": "Intelligence",
       "value": "10",
@@ -90,6 +95,7 @@
     },
     "5": {
       "id": "5",
+      "page":0,
       "name": "DEX",
       "uiName": "Dexterity",
       "value": "13",
@@ -108,6 +114,7 @@
     },
     "6": {
       "id": "6",
+      "page":0,
       "name": "CHA",
       "uiName": "Charisma",
       "value": "10",
@@ -126,6 +133,7 @@
     },
     "7": {
       "id": "7",
+      "page":0,
       "name": "BAB",
       "uiName": "Base Attack Bonus",
       "value": "1",
@@ -142,6 +150,7 @@
     },
     "8": {
       "id": "8",
+      "page":0,
       "name": "Will",
       "uiName": "Will",
       "value": "0",
@@ -158,6 +167,7 @@
     },
     "9": {
       "id": "9",
+      "page":0,
       "name": "Ref",
       "uiName": "Reflex",
       "value": "0",
@@ -174,6 +184,7 @@
     },
     "10": {
       "id": "10",
+      "page":0,
       "name": "Fort",
       "uiName": "Fortitude",
       "value": "2",
@@ -191,6 +202,7 @@
     },
     "11": {
       "id": "11",
+      "page":0,
       "name": "Initiative",
       "uiName": "Unnamed",
       "value": "0",
@@ -212,6 +224,7 @@
     },
     "12": {
       "id": "12",
+      "page":0,
       "name": "Stats",
       "uiName": "Unnamed",
       "value": "",
@@ -228,6 +241,7 @@
     },
     "13": {
       "id": "13",
+      "page":0,
       "name": "Saving Throws",
       "uiName": "Unnamed",
       "value": "",
@@ -244,6 +258,7 @@
     },
     "14": {
       "id": "14",
+      "page":0,
       "name": "Misc",
       "uiName": "Unnamed",
       "value": "",
@@ -260,6 +275,7 @@
     },
     "15": {
       "id": "15",
+      "page":0,
       "name": "CMB",
       "uiName": "Unnamed",
       "value": "0",
@@ -285,6 +301,7 @@
     },
     "16": {
       "id": "16",
+      "page":0,
       "name": "CMD",
       "uiName": "Unnamed",
       "value": "10",
@@ -310,6 +327,7 @@
     },
     "17": {
       "id": "17",
+      "page":0,
       "name": "Gear",
       "uiName": "Unnamed",
       "value": "",
@@ -326,6 +344,7 @@
     },
     "18": {
       "id": "18",
+      "page":0,
       "name": "Large Bastard Sword",
       "uiName": "Unnamed",
       "value": "",
@@ -342,6 +361,7 @@
     },
     "19": {
       "id": "19",
+      "page":0,
       "name": "Shortbow",
       "uiName": "Unnamed",
       "value": "",
@@ -358,6 +378,7 @@
     },
     "20": {
       "id": "20",
+      "page":0,
       "name": "Torches",
       "uiName": "Unnamed",
       "value": "5 ",
@@ -374,6 +395,7 @@
     },
     "21": {
       "id": "21",
+      "page":0,
       "name": "Arrows",
       "uiName": "Unnamed",
       "value": "50 ",
@@ -390,6 +412,7 @@
     },
     "22": {
       "id": "22",
+      "page":0,
       "name": "Padded Armor",
       "uiName": "Unnamed",
       "value": "",
@@ -406,6 +429,7 @@
     },
     "23": {
       "id": "23",
+      "page":0,
       "name": "HP",
       "uiName": "Unnamed",
       "value": "15",
@@ -422,6 +446,7 @@
     },
     "24": {
       "id": "24",
+      "page":0,
       "name": "Touch",
       "uiName": "Unnamed",
       "value": "10",
@@ -443,6 +468,7 @@
     },
     "25": {
       "id": "25",
+      "page":0,
       "name": "Flat",
       "uiName": "Unnamed",
       "value": "12",
@@ -459,6 +485,7 @@
     },
     "26": {
       "id": "26",
+      "page":0,
       "name": "AC",
       "uiName": "Unnamed",
       "value": "12",
@@ -480,6 +507,7 @@
     },
     "27": {
       "id": "27",
+      "page":0,
       "name": " To-hit",
       "uiName": "Unnamed",
       "value": "0",
@@ -505,6 +533,7 @@
     },
     "28": {
       "id": "28",
+      "page":0,
       "name": "Dmg",
       "uiName": "Unnamed",
       "value": "0",
@@ -526,6 +555,7 @@
     },
     "29": {
       "id": "29",
+      "page":0,
       "name": "Greatsword",
       "uiName": "Unnamed",
       "value": "",
@@ -542,6 +572,7 @@
     },
     "30": {
       "id": "30",
+      "page":0,
       "name": "Skills",
       "uiName": "Unnamed",
       "value": "",
@@ -558,6 +589,7 @@
     },
     "31": {
       "id": "31",
+      "page":0,
       "name": "Active Abilities",
       "uiName": "Unnamed",
       "value": "",
@@ -574,6 +606,7 @@
     },
     "32": {
       "id": "32",
+      "page":0,
       "name": "Rage (6/day)",
       "uiName": "Rage",
       "value": "",
@@ -591,6 +624,7 @@
     },
     "33": {
       "id": "33",
+      "page":0,
       "name": "Power Attack",
       "uiName": "Power Attack",
       "value": "",
@@ -608,6 +642,7 @@
     },
     "34": {
       "id": "34",
+      "page":0,
       "name": "Sense Motive",
       "uiName": "Unnamed",
       "value": "1",
@@ -629,6 +664,7 @@
     },
     "35": {
       "id": "35",
+      "page":0,
       "name": "Acrobatics",
       "uiName": "Unnamed",
       "value": "1",
@@ -652,6 +688,7 @@
     },
     "36": {
       "id": "36",
+      "page":0,
       "name": "Perception",
       "uiName": "Unnamed",
       "value": "1",
@@ -675,6 +712,7 @@
     },
     "37": {
       "id": "37",
+      "page":0,
       "name": "Climb",
       "uiName": "Unnamed",
       "value": "0",
@@ -698,6 +736,7 @@
     },
     "38": {
       "id": "38",
+      "page":0,
       "name": "Intimidate",
       "uiName": "Unnamed",
       "value": "0",
@@ -721,6 +760,7 @@
     },
     "39": {
       "id": "39",
+      "page":0,
       "name": "Craft (Stick)",
       "uiName": "Craft (Stick)",
       "value": "1",

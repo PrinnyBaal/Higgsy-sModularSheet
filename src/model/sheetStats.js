@@ -3,7 +3,9 @@ function loadStorage(defaultCharSheet){
     "charName":"Sample",
     "charSheets":[defaultCharSheet],
     "id":0,
-    "activeSheet":0
+    "activeSheet":0,
+    "activePage":0,
+    "totalPages":1
   };
   //setting up local Storage after a reset
   let savedChars=[defaultCharInfo];

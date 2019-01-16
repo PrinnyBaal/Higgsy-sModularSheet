@@ -130,7 +130,15 @@ body{
   background-color:white;
   border-radius:1%;
   /* z-index:0; */
-  overflow:hidden;
+  overflow:visible;
+}
+
+#pageNavigation{
+  width: 60%;
+  position:absolute;
+  margin-left:20%;
+  height:20px;
+  bottom:-40px;
 }
 
 #palette{
@@ -414,6 +422,7 @@ body{
   cursor:pointer;
 }
 
+
 .lightWoodBtn{
   background-color:#8C6546;
   color:black;
@@ -445,7 +454,19 @@ body{
   </div>
   <div id="activeSheet" class="charSheet">
 
+    <div class="container" id="pageNavigation">
+      <div class="row" >
+        <button class ="col-3 trayButton" id="reversePageButton" style="height:100%;">Back</button>
+        <button class ="offset-1 col-4 trayButton" id="spawnPage" style="height:100%;">New Page</button>
+        <button class ="offset-1 col-3 trayButton" id="forwardPageButton" style="height:100%;">Forward</button>
+      </div>
+      <div class="row mt-3" >
+        <button class ="offset-4 col-4 trayButton" id="deletePage" style="height:100%;">Delete Page</button>
+      </div>
+    </div>
   </div>
+
+
   <div id="palette" class="container-fluid no-gutters">
 
     <div id="draggableInfo">
