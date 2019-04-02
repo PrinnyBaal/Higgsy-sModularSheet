@@ -20,9 +20,9 @@ sheetProj.view.sheetLogic = {
       });
 
 
-      if (!JSON.parse(localStorage.getItem("tutorialSkip"))){
-        runTutorial();
-      }
+      // if (!JSON.parse(localStorage.getItem("tutorialSkip"))){
+      //   runTutorial();
+      // }
 
     }
 };
