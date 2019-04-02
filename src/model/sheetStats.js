@@ -1,6 +1,6 @@
 function loadStorage(defaultCharSheet){
   let defaultCharInfo={
-    "charName":"Sample",
+    "charName":"Samplus",
     "charSheets":[defaultCharSheet],
     "id":0,
     "activeSheet":0,
