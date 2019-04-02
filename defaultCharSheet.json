@@ -1,36 +1,2689 @@
 {
-  "draggables":{
-    "0":{
-      "id":0,
-      "name":"HP",
-      "uiName":"Unnamed",
-      "value":"75",
-      "finalAblScore":0,
-      "finalMod":0,
-      "drawsFrom":[],
-      "activeRules":[],
-      "height":50,
-      "width":50,
-      "top":"50%",
-      "left":"50%",
-      "locked":false,
-      "bibleRef":0,
-      "page":0
+  "draggables": {
+    "0": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "",
+      "id": "0",
+      "left": "25px",
+      "locked": true,
+      "name": "HP (Max:15)",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "86px",
+      "uiName": "Unnamed",
+      "value": "15",
+      "width": ""
+    },
+    "1": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "1",
+      "left": "147px",
+      "locked": true,
+      "name": "Battle Sheet",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "4px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "302px"
+    },
+    "10": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "36px",
+      "id": "10",
+      "left": "301px",
+      "locked": true,
+      "name": "Battle Notes",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "416px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "273px"
+    },
+    "106": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Always protect your healer.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "51px",
+      "id": "106",
+      "left": "441px",
+      "locked": true,
+      "name": "Healer",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "464px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "109px"
+    },
+    "11": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "11",
+      "left": "95px",
+      "locked": true,
+      "name": "Attacks",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "535px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "352px"
+    },
+    "118": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "118",
+      "left": "32px",
+      "locked": true,
+      "name": "My Feats",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "84px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "203px"
+    },
+    "12": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "36px",
+      "id": "12",
+      "left": "28px",
+      "locked": true,
+      "name": "To-hit Mod",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "577px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "184px"
+    },
+    "122": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "42px",
+      "id": "122",
+      "left": "339px",
+      "locked": true,
+      "name": "Sherry Based Feats",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "82px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "200px"
+    },
+    "13": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "26px",
+      "id": "13",
+      "left": "292px",
+      "locked": true,
+      "name": "DMG Mod",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "577px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "104px"
+    },
+    "14": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "27px",
+      "id": "14",
+      "left": "454px",
+      "locked": true,
+      "name": "DMG Dice",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "574px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "103px"
+    },
+    "15": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "15",
+      "left": "7px",
+      "locked": true,
+      "name": "Longsword ATK",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "623px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "220px"
+    },
+    "16": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Difficult terrain takes 2 squares of movement and you can't 5-foot step INTO it or charge THROUGH it!\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "50px",
+      "id": "16",
+      "left": "301px",
+      "locked": true,
+      "name": "Difficult Terrain",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "466px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "111px"
+    },
+    "17": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "17",
+      "left": "146px",
+      "locked": true,
+      "name": "Skill Sheets",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "4px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "282px"
+    },
+    "18": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "18",
+      "left": "396px",
+      "locked": true,
+      "name": "DEX Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "48px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "123px"
+    },
+    "19": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "19",
+      "left": "327px",
+      "locked": true,
+      "name": "Climb",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "704px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "255px"
+    },
+    "2": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "",
+      "id": "2",
+      "left": "476px",
+      "locked": true,
+      "name": "Initiative",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "68px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": ""
+    },
+    "20": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "20",
+      "left": "326px",
+      "locked": true,
+      "name": "Swim",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "734px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "255px"
+    },
+    "21": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "21",
+      "left": "325px",
+      "locked": true,
+      "name": "Bluff",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "399px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "254px"
+    },
+    "22": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "22",
+      "left": "0px",
+      "locked": true,
+      "name": "Spellcraft",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "781px",
+      "uiName": "Spellcraft",
+      "value": "0",
+      "width": "268px"
+    },
+    "23": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "23",
+      "left": "333px",
+      "locked": true,
+      "name": "Acrobatics",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "107px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "251px"
+    },
+    "24": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "24",
+      "left": "333px",
+      "locked": true,
+      "name": "Disable Device",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "141px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "252px"
+    },
+    "25": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "25",
+      "left": "325px",
+      "locked": true,
+      "name": "Diplomacy",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "429px",
+      "uiName": "Diplomacy",
+      "value": "0",
+      "width": "255px"
+    },
+    "26": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "26",
+      "left": "325px",
+      "locked": true,
+      "name": "Disguise",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "459px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "27": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "27",
+      "left": "2px",
+      "locked": true,
+      "name": "Appraise",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "385px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "259px"
+    },
+    "28": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "28",
+      "left": "332px",
+      "locked": true,
+      "name": "Escape Artist",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "169px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "29": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "29",
+      "left": "333px",
+      "locked": true,
+      "name": "Fly",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "199px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "257px"
+    },
+    "3": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "95",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "",
+      "id": "3",
+      "left": "24px",
+      "locked": true,
+      "name": "Fort",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "204px",
+      "uiName": "Fortitude",
+      "value": "0",
+      "width": ""
+    },
+    "30": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "30",
+      "left": "333px",
+      "locked": true,
+      "name": "Ride",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "227px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "31": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "31",
+      "left": "4px",
+      "locked": true,
+      "name": "Profession( Alchemist)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "166px",
+      "uiName": "Proffesion (Alchemist)",
+      "value": "0",
+      "width": "258px"
+    },
+    "32": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "32",
+      "left": "4px",
+      "locked": true,
+      "name": "Sense Motive",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "195px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "259px"
+    },
+    "33": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "33",
+      "left": "5px",
+      "locked": true,
+      "name": "Survival",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "224px",
+      "uiName": "Survival",
+      "value": "0",
+      "width": "259px"
+    },
+    "34": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "50px",
+      "id": "34",
+      "left": "361px",
+      "locked": true,
+      "name": "STR Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "644px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "173px"
+    },
+    "35": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "50px",
+      "id": "35",
+      "left": "33px",
+      "locked": true,
+      "name": "Int",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "324px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "36": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "49px",
+      "id": "36",
+      "left": "51px",
+      "locked": true,
+      "name": "WIS Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "52px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "145px"
+    },
+    "37": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "55px",
+      "id": "37",
+      "left": "381px",
+      "locked": true,
+      "name": "CHA Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "332px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "147px"
+    },
+    "38": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "38",
+      "left": "333px",
+      "locked": true,
+      "name": "Sleight of Hand",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "257px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "257px"
+    },
+    "39": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ],
+        [
+          "76",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "39",
+      "left": "332px",
+      "locked": true,
+      "name": "Stealth",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "287px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "256px"
+    },
+    "4": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "4",
+      "left": "141px",
+      "locked": true,
+      "name": "AC",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "86px",
+      "uiName": "AC",
+      "value": "10",
+      "width": "108px"
+    },
+    "40": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "40",
+      "left": "324px",
+      "locked": true,
+      "name": "Handle Animal",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "490px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "41": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "41",
+      "left": "3px",
+      "locked": true,
+      "name": "Perception",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "137px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "260px"
+    },
+    "42": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "42",
+      "left": "4px",
+      "locked": true,
+      "name": "Heal",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "106px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "261px"
+    },
+    "43": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          "-1"
+        ],
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "43",
+      "left": "324px",
+      "locked": true,
+      "name": "Intimidate",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "519px",
+      "uiName": "Intimidate",
+      "value": "0",
+      "width": "259px"
+    },
+    "44": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "44",
+      "left": "325px",
+      "locked": true,
+      "name": "Perform",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "551px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "45": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "45",
+      "left": "325px",
+      "locked": true,
+      "name": "Use Magic Device",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "584px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "46": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "46",
+      "left": "2px",
+      "locked": true,
+      "name": "Craft ( )",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "415px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "260px"
+    },
+    "47": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "47",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Arcana)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "444px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "263px"
+    },
+    "48": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "48",
+      "left": "1px",
+      "locked": true,
+      "name": "Knowledge (Dungeoneering)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "474px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "263px"
+    },
+    "49": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "49",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Engineering)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "503px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "264px"
+    },
+    "5": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "93px",
+      "id": "5",
+      "left": "24px",
+      "locked": true,
+      "name": "Will",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "426px",
+      "uiName": "Will",
+      "value": "0",
+      "width": "101px"
+    },
+    "50": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "50",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Geography)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "532px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "265px"
+    },
+    "51": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "51",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (History)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "564px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "266px"
+    },
+    "52": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "52",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Local)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "596px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "266px"
+    },
+    "53": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "53",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Nature)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "628px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "267px"
+    },
+    "54": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "54",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Nobility)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "660px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "267px"
+    },
+    "55": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "55",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Planes)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "690px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "268px"
+    },
+    "56": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "56",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Religion)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "722px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": "268px"
+    },
+    "57": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "description": "Linguistics",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "57",
+      "left": "0px",
+      "locked": true,
+      "name": "Linguistics",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "752px",
+      "uiName": "Linguistics",
+      "value": "0",
+      "width": "269px"
+    },
+    "58": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "62px",
+      "id": "58",
+      "left": "160px",
+      "locked": true,
+      "name": "Spell Book",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "6px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "59": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "47px",
+      "id": "59",
+      "left": "186px",
+      "locked": true,
+      "name": "SpellBook Second Page",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "8px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "210px"
+    },
+    "6": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "",
+      "id": "6",
+      "left": "24px",
+      "locked": true,
+      "name": "Ref",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "313px",
+      "uiName": "Reflex",
+      "value": "0",
+      "width": ""
+    },
+    "60": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "60px",
+      "id": "60",
+      "left": "156px",
+      "locked": true,
+      "name": "Feats & Traits",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "11px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "271px"
+    },
+    "61": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "55px",
+      "id": "61",
+      "left": "144px",
+      "locked": true,
+      "name": "Base Stats",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "0px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "325px"
+    },
+    "62": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "62",
+      "left": "20px",
+      "locked": true,
+      "name": "STR",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "60px",
+      "uiName": "Strength",
+      "value": "10",
+      "width": "100px"
+    },
+    "63": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "63",
+      "left": "16px",
+      "locked": true,
+      "name": "CON",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "299px",
+      "uiName": "Constitution",
+      "value": "10",
+      "width": "100px"
+    },
+    "64": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "64",
+      "left": "19px",
+      "locked": true,
+      "name": "INT",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "433px",
+      "uiName": "Intelligence",
+      "value": "10",
+      "width": "100px"
+    },
+    "65": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "65",
+      "left": "18px",
+      "locked": true,
+      "name": "DEX",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "177px",
+      "uiName": "Dexterity",
+      "value": "10",
+      "width": "100px"
+    },
+    "66": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 12,
+      "finalMod": 10,
+      "height": "103px",
+      "id": "66",
+      "left": "15px",
+      "locked": true,
+      "name": "WIS",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "557px",
+      "uiName": "Wisdom",
+      "value": "10",
+      "width": "102px"
+    },
+    "67": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "67",
+      "left": "16px",
+      "locked": true,
+      "name": "CHA",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "686px",
+      "uiName": "Charisma",
+      "value": "10",
+      "width": "100px"
+    },
+    "68": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 8,
+      "height": "100px",
+      "id": "68",
+      "left": "392px",
+      "locked": true,
+      "name": "BAB",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Attack",
+      "top": "510px",
+      "uiName": "BAB",
+      "value": "8",
+      "width": "100px"
+    },
+    "69": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "description": "https://www.d20pfsrd.com/gamemastering/combat/#TOC-Combat-Maneuver-Bonus",
+      "drawsFrom": [
+        [
+          "68",
+          1
+        ],
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 8,
+      "height": "100px",
+      "id": "69",
+      "left": "339px",
+      "locked": true,
+      "name": "CMB",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "624px",
+      "uiName": "CMB",
+      "value": "0",
+      "width": "100px"
+    },
+    "7": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 10,
+      "height": "",
+      "id": "7",
+      "left": "145px",
+      "locked": true,
+      "name": "TouchAC",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "202px",
+      "uiName": "Touch AC",
+      "value": "10",
+      "width": ""
+    },
+    "70": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "description": "https://www.d20pfsrd.com/gamemastering/combat/#TOC-Combat-Maneuver-Defense",
+      "drawsFrom": [
+        [
+          "68",
+          1
+        ],
+        [
+          "96",
+          1
+        ],
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 18,
+      "height": "100px",
+      "id": "70",
+      "left": "468px",
+      "locked": true,
+      "name": "CMD",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "625px",
+      "uiName": "CMD",
+      "value": "10",
+      "width": "100px"
+    },
+    "71": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "56px",
+      "id": "71",
+      "left": "463px",
+      "locked": true,
+      "name": "1d8",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "613px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "96px"
+    },
+    "72": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "72",
+      "left": "244px",
+      "locked": true,
+      "name": "Longsword DMG",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "624px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "211px"
+    },
+    "73": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "73",
+      "left": "4px",
+      "locked": true,
+      "name": "Longbow ATK",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "685px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "222px"
+    },
+    "74": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "74",
+      "left": "242px",
+      "locked": true,
+      "name": "Longbow DMG",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "687px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "214px"
+    },
+    "75": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "51px",
+      "id": "75",
+      "left": "465px",
+      "locked": true,
+      "name": "1d8",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "679px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "94px"
+    },
+    "76": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "76",
+      "left": "324px",
+      "locked": true,
+      "name": "Armor Check Penalty",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "811px",
+      "uiName": "Armor Check Penalty",
+      "value": "0",
+      "width": "271px"
+    },
+    "77": {
+      "activeRules": [
+      ],
+      "backgroundArt": "",
+      "bibleRef": "4",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "",
+      "id": "77",
+      "left": "125px",
+      "locked": true,
+      "name": "Arcane Spell Failure %",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "805px",
+      "uiName": "Arcane Spell Failure",
+      "value": "0",
+      "width": ""
+    },
+    "78": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "70",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 18,
+      "height": "",
+      "id": "78",
+      "left": "143px",
+      "locked": true,
+      "name": "CMD",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "423px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": ""
+    },
+    "79": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "79",
+      "left": "337px",
+      "locked": true,
+      "name": "SLA",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "83px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "207px"
+    },
+    "8": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 10,
+      "height": "",
+      "id": "8",
+      "left": "145px",
+      "locked": true,
+      "name": "Flat-Footed",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "313px",
+      "uiName": "Flat-Footed AC",
+      "value": "10",
+      "width": ""
+    },
+    "80": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "80",
+      "left": "10px",
+      "locked": true,
+      "name": "LV 1",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "250px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "221px"
+    },
+    "81": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "81",
+      "left": "325px",
+      "locked": true,
+      "name": "LV 2",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "248px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "233px"
+    },
+    "82": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "35px",
+      "id": "82",
+      "left": "6px",
+      "locked": true,
+      "name": "LV 3",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "462px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "224px"
+    },
+    "83": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "35px",
+      "id": "83",
+      "left": "326px",
+      "locked": true,
+      "name": "LV 4",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "460px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "223px"
+    },
+    "84": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "84",
+      "left": "24px",
+      "locked": true,
+      "name": "LV 5",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "83px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "201px"
+    },
+    "85": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "85",
+      "left": "327px",
+      "locked": true,
+      "name": "LV 6",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "79px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "212px"
+    },
+    "86": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "86",
+      "left": "19px",
+      "locked": true,
+      "name": "LV 7",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "310px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "207px"
+    },
+    "87": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "41px",
+      "id": "87",
+      "left": "305px",
+      "locked": true,
+      "name": "LV 8",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "305px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "249px"
+    },
+    "88": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "88",
+      "left": "165px",
+      "locked": true,
+      "name": "LV 9",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "515px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "192px"
+    },
+    "89": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "89",
+      "left": "146px",
+      "locked": true,
+      "name": "Character Notes",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "13px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "250px"
+    },
+    "9": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "9",
+      "left": "13px",
+      "locked": true,
+      "name": "Cantrips",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "81px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "233px"
+    },
+    "90": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "90",
+      "left": "170px",
+      "locked": true,
+      "name": "Inventory",
+      "page": 7,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "14px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "254px"
+    },
+    "91": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "64",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "91",
+      "left": "143px",
+      "locked": true,
+      "name": "Int Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "434px",
+      "uiName": "Int Mod",
+      "value": 0,
+      "width": ""
+    },
+    "92": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "66",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "92",
+      "left": "141px",
+      "locked": true,
+      "name": "Wis Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "556px",
+      "uiName": "Wis Mod",
+      "value": 0,
+      "width": ""
+    },
+    "93": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "67",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "93",
+      "left": "136px",
+      "locked": true,
+      "name": "Cha Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "684px",
+      "uiName": "Cha Mod",
+      "value": 0,
+      "width": ""
+    },
+    "94": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "65",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "94",
+      "left": "144px",
+      "locked": true,
+      "name": "Dex Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "174px",
+      "uiName": "Dex Mod",
+      "value": 0,
+      "width": ""
+    },
+    "95": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "63",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "95",
+      "left": "147px",
+      "locked": true,
+      "name": "Con Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "296px",
+      "uiName": "Con Mod",
+      "value": 0,
+      "width": ""
+    },
+    "96": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "62",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 0,
+      "height": "",
+      "id": "96",
+      "left": "141px",
+      "locked": true,
+      "name": "Str Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "58px",
+      "uiName": "Strength Mod",
+      "value": 0,
+      "width": ""
+    },
+    "99": {
+      "activeRules": [
+      ],
+      "backgroundArt": "https://res.cloudinary.com/metaverse/image/upload/v1554168043/Paizo%20Art/Fighter_-_Flenta.png",
+      "bibleRef": "7",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "304px",
+      "id": "99",
+      "left": "273px",
+      "locked": true,
+      "name": "Title",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "121px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "288px"
     }
   },
-  "rules":{
-    "abilityScores":{
-      "id":0,
-      "name":"Ability Scores",
-      "description":"Ability scores work a little differently than most other stats in Pathfinder as the modifier they offer isn't their final score.  For example a 12 Strength translates to a modifier of +1.",
-      "label":"abilityScore"
+  "rules": {
+    "abilityScores": {
+      "description": "Ability scores work a little differently than most other stats in Pathfinder as the modifier they offer isn't their final score. For example a 12 Strength translates to a modifier of +1.",
+      "id": 0,
+      "label": "abilityScore",
+      "name": "Ability Scores"
     },
-    "classSkill":{
-      "id":1,
-      "name":"Class Skill",
-      "description":"In Pathfinder certain skills are considered to be 'in class', essentially meaning that your character has an innate aptitude toward this skill.  If a skill is in class the first rank placed in that skill (a base input of at least 1) will give a +3 bonus.",
-      "label":"classSkill"
+    "classSkill": {
+      "description": "In Pathfinder certain skills are considered to be 'in class', essentially meaning that your character has an innate aptitude toward this skill. If a skill is in class the first rank placed in that skill (a base input of at least 1) will give a +3 bonus.",
+      "id": 1,
+      "label": "classSkill",
+      "name": "Class Skill"
     }
-
+  },
+  "toggles": {
+    "0": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nBull's Strength grants a +4 enhancement bonus to Strength",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 62
+        }
+      },
+      "icon": "https://img.icons8.com/office/80/000000/bull.png",
+      "id": 0,
+      "name": "Bull's Strength",
+      "slotNum": 0,
+      "status": ""
+    },
+    "1": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nBear's Endurance grants a +4 enhancement bonus to Constitution",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 63
+        }
+      },
+      "icon": "https://img.icons8.com/cotton/64/000000/bear.png",
+      "id": 1,
+      "name": "Bear's Endurance",
+      "slotNum": 1,
+      "status": ""
+    },
+    "2": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nFox's Cunning grants a +4 enhancement bonus to Intelligence.",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 64
+        }
+      },
+      "icon": "https://img.icons8.com/plasticine/100/000000/fox.png",
+      "id": 2,
+      "name": "Fox's Cunning",
+      "slotNum": 3,
+      "status": ""
+    },
+    "3": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nEagle's Splendor grants a +4 enhancement bonus to Charisma.",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 67
+        }
+      },
+      "icon": "https://img.icons8.com/color/96/000000/falcon.png",
+      "id": 3,
+      "name": "Eagle's Splendor",
+      "slotNum": 5,
+      "status": ""
+    },
+    "4": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nCat's Grace grants a +4 enhancement bonus to Dexterity.",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 65
+        }
+      },
+      "icon": "https://img.icons8.com/doodle/96/000000/cat.png",
+      "id": 4,
+      "name": "Cat's Grace",
+      "slotNum": 2,
+      "status": ""
+    },
+    "5": {
+      "bar": 0,
+      "description": "Casting Time: 1 standard action\nRange: touch\nTarget: creature touched\nDuration: 1 min./level\n\nOwl's Wisdom grants a +4 enhancement bonus to Wisdom",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 66
+        }
+      },
+      "icon": "https://img.icons8.com/plasticine/100/000000/owl.png",
+      "id": 5,
+      "name": "Owl's Wisdom",
+      "slotNum": 4,
+      "status": ""
+    },
+    "6": {
+      "bar": 1,
+      "description": "NOTE: Sheet does not automatically detect maximum dex.\n\n\n Heavy Wooden Shield\n\nShield Bash Attacks: You can bash an opponent with a heavy shield. See “shield, heavy” on Table: Weapons for the damage dealt by a shield bash. Used this way, a heavy shield is a martial bludgeoning weapon. For the purpose of penalties on attack rolls, treat a heavy shield as a one-handed weapon. If you use your shield as a weapon, you lose its Armor Class bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right. ",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Shield",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Shield",
+          "id": 1,
+          "targetDraggable": 8
+        },
+        "2": {
+          "effectMod": 15,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 77
+        },
+        "3": {
+          "effectMod": -2,
+          "effectType": "Untyped",
+          "id": 3,
+          "targetDraggable": 76
+        }
+      },
+      "icon": "https://img.icons8.com/dusk/64/000000/shield.png",
+      "id": 6,
+      "name": "Heavy Wood Shield",
+      "slotNum": 0,
+      "status": ""
+    },
+    "7": {
+      "bar": 1,
+      "description": "NOTE: Sheet does not automatically detect maximum dex.\n\nMax-dex: 6\n\nLeather armor is made up of multiple overlapping pieces of leather, boiled to increase their natural toughness and then deliberately stitched together. Although not as sturdy as metal armor, the flexibility it allows wearers makes it among the most widely used types of armor.",
+      "effects": {
+        "0": {
+          "effectMod": 10,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 77
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Armor",
+          "id": 1,
+          "targetDraggable": 4
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Armor",
+          "id": 2,
+          "targetDraggable": 8
+        }
+      },
+      "icon": "https://img.icons8.com/ultraviolet/80/000000/armored-breastplate.png",
+      "id": 7,
+      "name": "Leather Armor",
+      "slotNum": 1,
+      "status": ""
+    }
   }
 }

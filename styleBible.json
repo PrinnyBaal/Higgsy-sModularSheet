@@ -1,22 +1,53 @@
 {
-  "0": {"id":0,
-      "name":"Island",
-      "description":"It is an island onto itself.  This style comes with a label attached and an input field to store either text or numbers.  While you can wire it to dynamically affect other fields it cannot be affected by outside forces.",
-      "html":"<div id='temporary' class=\"testBox draggable\"><input class=\"boxTitle\" onchange='changeTitle(this)'><input class=\"baseInput\" style='width:100%;' onchange='changeValue(this)'></div>"
-    },
-  "1": {"id":1,
-      "name":"Label",
-      "description":"Has no slot for values, this remains useful for labeling your sheet for better readability.",
-      "html":"<div id='temporary' class=\"testBox draggable\"><input class=\"label\" onchange='changeTitle(this)'></div>"
-    },
-  "2": {"id":2,
-      "name":"Dynamic",
-      "description":"Has an attched label but more importantly it has both an input field AND a section where the stat's modified value can be shown.  This allows it to dynamically update itself based on changes elsewhere on the character sheet.  Note that this feature requires the input to be in numerical form.",
-      "html":"<div id='temporary' class='testBox draggable'><input class='boxTitle' onchange='changeTitle(this)'><input class='baseInput' onchange='changeValue(this)'><input readonly class='finalMod'></div>"
-    },
-  "3": {"id":3,
-      "name":"Dynamic, labelless",
-      "description":"Functions identically to the Dynamic model but does not have a label.",
-      "html":"<div id='temporary' class='testBox draggable'><input class='baseInput' style='height:100%' onchange='changeValue(this)'><input style='height:100%' readonly class='finalMod'></div>"
-    }
+  "0": {
+    "id": 0,
+    "name": "Island",
+    "description": "It is an island onto itself.  This style comes with a label attached and an input field to store either text or numbers.  While you can wire it to dynamically affect other fields it cannot be affected by outside forces.",
+    "html": "<div id='temporary' class=\"testBox draggable\"><input class=\"boxTitle testBoxTitleStyle\" onchange='changeTitle(this)'><input class=\"baseInput testBoxBaseInputStyle\" style='width:100%; text-align:center;' onchange='changeValue(this)'></div>"
+  },
+  "1": {
+    "id": 1,
+    "name": "Label",
+    "description": "Has no slot for values, this remains useful for labeling your sheet for better readability.",
+    "html": "<div id='temporary' class=\"testBox draggable\"><input class=\"label\" onchange='changeTitle(this)'></div>"
+  },
+  "2": {
+    "id": 2,
+    "name": "Dynamic",
+    "description": "Has an attched label but more importantly it has both an input field AND a section where the stat's modified value can be shown.  This allows it to dynamically update itself based on changes elsewhere on the character sheet.  Note that this feature requires the input to be in numerical form.",
+    "html": "<div id='temporary' class='testBox draggable'><input class='boxTitle testBoxTitleStyle' onchange='changeTitle(this)'><input class='baseInput testBoxBaseInputStyle' onchange='changeValue(this)'><input readonly class='finalMod testBoxFinalModStyle'></div>"
+  },
+  "3": {
+    "id": 3,
+    "name": "Dynamic, labelless",
+    "description": "Functions identically to the Dynamic model but does not have a label.",
+    "html": "<div id='temporary' class='testBox draggable'><input class='baseInput testBoxBaseInputStyle' style='height:100%' onchange='changeValue(this)'><input style='height:100%' readonly class='finalMod testBoxFinalModStyle'></div>"
+  },
+  "4": {
+    "id": 4,
+    "name": "Skill Slot",
+    "description": "Meant to hold skills, designed to be thin and stackable.",
+    "html": "<div id='temporary' class='stackBox draggable'><table style='width:100%; height:100%;'><tr style='height:100%;'><td style='width:25%'><input style='height:100%; position:relative;' readonly class='finalMod stackBoxFinalModStyle'></td><td style='width:60%'><input class='boxTitle stackBoxTitleStyle'  onchange='changeTitle(this)'></td><td style='width:15%'><input class='baseInput stackBoxBaseInputStyle' style='height:100%;' onchange='changeValue(this)'></td></tr></table></div>"
+  },
+  "5": {
+    "id": 5,
+    "name": "Dependent",
+    "description": "Its base input technically exists but is unreachable, its stats are made to be entirely dependent on outside sources",
+    "html": "<div id='temporary' class='dependentBox draggable'><input class=\"baseInput\" style='visibility:hidden; position:absolute;' onchange='changeValue(this)'><input class='boxTitle dependentBoxTitleStyle' onchange='changeTitle(this)'><input readonly class='finalMod dependentBoxFinalModStyle'></div>"
+  },
+  "6": {
+    "id": 6,
+    "name": "ArtBox",
+    "description": "A draggable that just holds a piece of background art.  In the future may come in different shapes and sizes, currently just a square.  Art changeable through palette.",
+    "html": "<img id='temporary' class='artBox draggable'>"
+  },
+  "7": {
+    "id": 7,
+    "name": "ArtCameo",
+    "description": "An art draggable that comes in a circular format, good for cameo or portrait looks",
+    "html": "<img id='temporary' class='artBox artCameo draggable'>"
+  }
+
+
+
 }

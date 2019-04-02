@@ -1,0 +1,4979 @@
+{
+  "draggables": {
+    "0": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 80,
+      "height": "",
+      "id": "0",
+      "left": "25px",
+      "locked": true,
+      "name": "HP (Max:102)",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "86px",
+      "uiName": "Unnamed",
+      "value": "80 (80 new max)",
+      "width": ""
+    },
+    "1": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "1",
+      "left": "147px",
+      "locked": true,
+      "name": "Battle Sheet",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "4px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "302px"
+    },
+    "10": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "36px",
+      "id": "10",
+      "left": "302px",
+      "locked": true,
+      "name": "Battle Notes",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "198px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "273px"
+    },
+    "100": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "DR: 10/law DR: 3/P or S\n\nFire Resist: 5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "41px",
+      "id": "100",
+      "left": "299px",
+      "locked": true,
+      "name": "DR",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "382px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "135px"
+    },
+    "101": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Due to Demonsilk Vest your movespeed is crippled down to 10 when retreating from a challenger",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "101",
+      "left": "301px",
+      "locked": true,
+      "name": "No Retreat!",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "480px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "136px"
+    },
+    "102": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Due to Victor's belt you have a 50% chance to rage when hit by an attack that leaves you bloodied or may do so as a standard action",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "47px",
+      "id": "102",
+      "left": "298px",
+      "locked": true,
+      "name": "Pain->Rage",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "430px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "139px"
+    },
+    "103": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "69",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 25,
+      "height": "31px",
+      "id": "103",
+      "left": "22px",
+      "locked": true,
+      "name": "Grapple",
+      "page": 0,
+      "toggleEffects": {
+        "26": [
+          [
+            4,
+            "Untyped"
+          ]
+        ],
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ],
+        "7": [
+          [
+            2,
+            "Circumstance"
+          ]
+        ],
+        "9": [
+          [
+            2,
+            "Competence"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "705px",
+      "uiName": "Grapple",
+      "value": 0,
+      "width": "299px"
+    },
+    "104": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 7,
+      "height": "63px",
+      "id": "104",
+      "left": "328px",
+      "locked": true,
+      "name": "Constrict (3d6/7d6/6d6/10d6)+...",
+      "page": 0,
+      "toggleEffects": {
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "703px",
+      "uiName": "Constrict",
+      "value": 0,
+      "width": "228px"
+    },
+    "105": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "103",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 20,
+      "height": "32px",
+      "id": "105",
+      "left": "21px",
+      "locked": true,
+      "name": "Secondary Grapple",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "735px",
+      "uiName": "Unnamed",
+      "value": "-5",
+      "width": "300px"
+    },
+    "106": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "While holding a religious symbol of good gods, take -1 to all dice rolls, or don't I'm not a cop.\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "57px",
+      "id": "106",
+      "left": "449px",
+      "locked": true,
+      "name": "Holy Curse",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "252px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "120px"
+    },
+    "107": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "An abrikandilu loathes the sight of its own reflection. Using a mirror grants a +5 bonus on Intimidate checks against an abrikandilu. An abrikandilu adjacent to a mirror or attacked by a mirror-carrying creature (at the GM’s discretion, some shields could be considered mirrors) must attempt a DC 15 Will save at the start of its turn. If it fails, it must focus all of its actions that round on attempts to destroy the mirror.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "48px",
+      "id": "107",
+      "left": "447px",
+      "locked": true,
+      "name": "Mirror Hate",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "326px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "121px"
+    },
+    "108": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "description": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/demon/demon-abrikandilu/",
+      "drawsFrom": [
+        [
+          "95",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "31px",
+      "id": "108",
+      "left": "334px",
+      "locked": true,
+      "name": "Mutilation Bite",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "663px",
+      "uiName": "Unnamed",
+      "value": "15",
+      "width": "216px"
+    },
+    "109": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "At will, a vampire hunter can use detect undead, as the spell. \n\nA vampire hunter can, as a move action, concentrate on a single item or individual within 60 feet and determine if it is undead, learning the strength of its aura as if he had studied it for 3 rounds. \n\nWhile focusing on one individual or object, the vampire hunter does not detect undead in any other object or individual within range.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "109",
+      "left": "444px",
+      "locked": true,
+      "name": "Detect Undead",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "478px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "126px"
+    },
+    "11": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "11",
+      "left": "95px",
+      "locked": true,
+      "name": "Attacks",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "535px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "352px"
+    },
+    "110": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "description": "You can destroy objects outright using a strength check, consult the following page for details.",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 13,
+      "height": "",
+      "id": "110",
+      "left": "124px",
+      "locked": true,
+      "name": "Destroy Object",
+      "page": 0,
+      "toggleEffects": {
+        "14": [
+          [
+            5,
+            "Racial"
+          ]
+        ],
+        "17": [
+          [
+            2,
+            "Circumstance"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "789px",
+      "uiName": "Destroy Object",
+      "value": "0",
+      "width": ""
+    },
+    "111": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "As a swift action, the vampire hunter can activate his vampiric focus. Ending the vampiric focus is a free action.\n\nHe can use each vampiric focus for a number of minutes per day equal to his level. This duration does not need to be consecutive, but it must be spent in 1-minute increments.\n\nOnce the vampire hunter ends a focus, it cannot be reactivated for 1 minute. The vampire hunter can have only one vampiric focus active at a time. Benefits from different vampiric foci do not stack with one another, including temporary hit points from multiple foci.\n\nVampiric Agility: All of the vampire hunter’s movement speeds are increased by 5 feet. At 8th level, his movement speeds are increased by 10 feet and he gains evasion, as the rogue class feature. At 16th level, the vampire hunter gains improved evasion, as the rogue advanced talent.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "51px",
+      "id": "111",
+      "left": "444px",
+      "locked": true,
+      "name": "Vampire Tech",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "426px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "129px"
+    },
+    "112": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "You can take X*2d6 damage to regain X*1 resonance points as a swift action.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "112",
+      "left": "445px",
+      "locked": true,
+      "name": "Blood For Blood",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "381px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "127px"
+    },
+    "113": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "height": "60px",
+      "id": "113",
+      "left": "354px",
+      "locked": true,
+      "name": "Lupine",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "133px",
+      "uiName": "Unnamed",
+      "value": "4/4",
+      "width": "62px"
+    },
+    "114": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 11,
+      "height": "60px",
+      "id": "114",
+      "left": "289px",
+      "locked": true,
+      "name": "Vampiric",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "134px",
+      "uiName": "Unnamed",
+      "value": "11/11",
+      "width": "65px"
+    },
+    "115": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "115",
+      "left": "263px",
+      "locked": true,
+      "name": "Charges",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "42px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "173px"
+    },
+    "116": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 24,
+      "height": "61px",
+      "id": "116",
+      "left": "351px",
+      "locked": true,
+      "name": "Resonance",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "73px",
+      "uiName": "Unnamed",
+      "value": "24/28",
+      "width": "63px"
+    },
+    "117": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 11,
+      "height": "60px",
+      "id": "117",
+      "left": "289px",
+      "locked": true,
+      "name": "G.Bane",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "73px",
+      "uiName": "Unnamed",
+      "value": "11/11",
+      "width": "63px"
+    },
+    "118": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "118",
+      "left": "32px",
+      "locked": true,
+      "name": "My Feats",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "84px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "203px"
+    },
+    "119": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": " In addition, if at least one enemy fails their save, you and your allies gain +3 morale bonus to attack and damage for the surprise round.\n\nOOHHh YEAAHH!\n\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "119",
+      "left": "42px",
+      "locked": true,
+      "name": "Stunning Irruption",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "138px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "177px"
+    },
+    "12": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ],
+        [
+          "68",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "",
+      "id": "12",
+      "left": "23px",
+      "locked": true,
+      "name": "Claw",
+      "page": 0,
+      "toggleEffects": {
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "596px",
+      "uiName": "Claw",
+      "value": 0,
+      "width": ""
+    },
+    "120": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "42px",
+      "id": "120",
+      "left": "41px",
+      "locked": true,
+      "name": "Snapping Turtle Style",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "190px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "121": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Feat effect granted by Sherry",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "121",
+      "left": "349px",
+      "locked": true,
+      "name": "Scion of the Land",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "139px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "180px"
+    },
+    "122": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "42px",
+      "id": "122",
+      "left": "339px",
+      "locked": true,
+      "name": "Sherry Based Feats",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "82px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "200px"
+    },
+    "123": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "123",
+      "left": "349px",
+      "locked": true,
+      "name": "Escape Route",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "193px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "182px"
+    },
+    "124": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": " Hand's Autonomy",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "124",
+      "left": "41px",
+      "locked": true,
+      "name": "Hand's Autonomy",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "241px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "180px"
+    },
+    "125": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Antagonize",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "47px",
+      "id": "125",
+      "left": "41px",
+      "locked": true,
+      "name": "Antagonize",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "293px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "181px"
+    },
+    "126": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Hunted or the Hunter (costs 3)\n\nWhen an enemy is benefiting from bane, favored enemy, hunter’s quarry, challenge, smite, etc against you, you also gain these benefits against them.\n\nI WANNA BE THE HUNTER, NOT THE HUNTED!\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "126",
+      "left": "38px",
+      "locked": true,
+      "name": "Hunter/Hunted",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "521px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "181px"
+    },
+    "127": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Custom abilities/traits from current campaign. ",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "40px",
+      "id": "127",
+      "left": "30px",
+      "locked": true,
+      "name": "Evolutions",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "463px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "194px"
+    },
+    "128": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "You gain your strength modifier to intimidate and the negative value of your charisma modifier instead of your charisma modifier (unless your charisma modifier is positive in which case why does everyone hate you - in this case use Charisma + Strength). Your penalty to diplomacy from your arm nows applies unless your face is also covered. ",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "53px",
+      "id": "128",
+      "left": "38px",
+      "locked": true,
+      "name": "Imposing Figure",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "575px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "182px"
+    },
+    "129": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Spellcaster \nYou can now cast spells from scrolls without consuming them by using resonance points equal to the spell’s level.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "129",
+      "left": "37px",
+      "locked": true,
+      "name": "Spellcaster",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "638px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "186px"
+    },
+    "13": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ],
+        [
+          "68",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "",
+      "id": "13",
+      "left": "23px",
+      "locked": true,
+      "name": "Bite",
+      "page": 0,
+      "toggleEffects": {
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "635px",
+      "uiName": "Bite",
+      "value": 0,
+      "width": ""
+    },
+    "130": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "A Wizard Wannabe - You can use wands and scrolls as if the spell was on your spell list (aka you don’t need Use Magic Device for these). You also gain an additional amount of resonance points each day equal to your highest modifier.\nClearly they’re just material components\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "53px",
+      "id": "130",
+      "left": "35px",
+      "locked": true,
+      "name": "Wizard Wannabe",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "696px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "189px"
+    },
+    "131": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per level\n\nArmy Across Time",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "131",
+      "left": "345px",
+      "locked": true,
+      "name": "Army Across time",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "508px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "132": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per level\n\nThis spell infuses a weapon with pure sunlight (the weapon need not be a bladed weapon).\n\nA weapon enhanced by this spell sheds light as if daylight had been cast on it. It functions as a magic and good weapon for the purposes of overcoming damage reduction.\n\nThe weapon grants a +2 sacred bonus on attack rolls against undead and deals +1d6 points of damage on a successful hit against such foes; against incorporeal undead, it functions as if it had the ghost touch weapon special ability. The weapon automatically confirms critical hits against foes that are vulnerable to sunlight.\n\nBlade of light",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "38px",
+      "id": "132",
+      "left": "344px",
+      "locked": true,
+      "name": "Blade of light",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "547px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "181px"
+    },
+    "133": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\n10 min per level\n\nThe target weapons and any ammunition they fire make no sound as part of their normal functions as a weapon. For instance, a firearm’s firing would not make an explosive sound, but if you cast this spell on a creature’s bite attack, it would not prevent it from vocalizing from its mouth. \n\nThe first time a creature is struck by a weapon affected by this spell, it must succeed at a Will save (SR applies to this effect) or it becomes unable to make noise louder than a whisper (Perception DC 10 to hear) whether vocally or by other means for the duration of the effect. \n\nBecause the creature can still whisper, this doesn’t interfere with verbal spell components. Whether it succeeds or fails its saving throw, the creature is immune to further effects from this casting of quieting weapons.\n\nQuieting Weapons",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "133",
+      "left": "345px",
+      "locked": true,
+      "name": "Quieting Weapons",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "594px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "181px"
+    },
+    "134": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nYou link your senses to the target, allowing you to see and hear through its eyes and ears. \n\nAs a move action you can shift your senses from yourself to the target or back again. \n\nWhen using the target’s senses, you are blind and deaf. When perceiving through the target, you use its normal and special senses (such as darkvision), not your own.\n\nWitness",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "134",
+      "left": "30px",
+      "locked": true,
+      "name": "Witness",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "497px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "137px"
+    },
+    "135": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nYou are transformed into a single-minded force of destruction. You gain the ferocity monster special ability, a number of temporary hit points equal to 1d6 + your caster level (maximum +10), and a +4 morale bonus on saving throws against mind-affecting effects. You cannot use the withdraw action or willingly move away from a creature that has attacked you.\n\nWhen you use this spell, you immediately take 4 points of Intelligence damage. You must make a DC 20 concentration check to cast spells, and all other concentration checks to cast spells have a –5 penalty.\n\nBattle Trance\n\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "135",
+      "left": "33px",
+      "locked": true,
+      "name": "Battle Trance",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "528px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "144px"
+    },
+    "136": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "One Round\nMinute per level\n\nEnlarge Person",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "136",
+      "left": "32px",
+      "locked": true,
+      "name": "Enlarge Person",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "290px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "176px"
+    },
+    "137": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nInstantaneous\n\nYou test a creature’s purity of convictions by exposing it to a sheet of divine fire. Unless the target’s alignment is within one step of your deity’s, the spell deals 1d6 points of damage per 2 caster levels (maximum 5d6 points of damage). \n\nHalf the damage is fire damage, but the other half results directly from divine power and is therefore not subject to being reduced by resistance to fire-based attacks. \n\nAdditionally, if the target has an element of its alignment that is in direct opposition to your (chaos opposes law and evil opposes good), you can also attempt an Intimidate check to demoralize the target as a free action.\n\nTrial by fire",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "137",
+      "left": "33px",
+      "locked": true,
+      "name": "Trial By Fire",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "557px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "141px"
+    },
+    "138": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per Level\n\nYou focus the energy of your mind, body, and spirit into a specific part of your being, granting yourself an exceptional ability to perform certain tasks. When you cast the spell, choose one of the following portions of your self as your focus target. Thereafter, you may change the focus target as a move action. You can gain the benefit of only one channel vigor spell at a time.\n\n Limbs: You gain the benefits of a haste spell.\n Mind: You gain a +4 competence bonus on Knowledge and Perception skill checks and on ranged attack rolls.\n Spirit: You gain a +6 competence bonus on Will saving throws and Bluff and Intimidate checks.\n Torso: You gain a +6 competence bonus on Fortitude saving throws and concentration checks.\n\n\nChannel Vigor",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "138",
+      "left": "34px",
+      "locked": true,
+      "name": "Channel Vigor",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "585px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "130px"
+    },
+    "139": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nInstantaneous\n\nWhen laying your hand upon a living creature, you channel positive energy that cures 4d8 points of damage + 1 point per caster level (maximum +20). \n\nSince undead are powered by negative energy, this spell deals damage to them instead of curing their wounds. An undead creature can apply Spell Resistance, and can attempt a Will save to take half damage.\n\nCure Critical Wounds \n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "44px",
+      "id": "139",
+      "left": "345px",
+      "locked": true,
+      "name": "Cure Critical Wounds",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "640px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "14": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 7,
+      "height": "30px",
+      "id": "14",
+      "left": "337px",
+      "locked": true,
+      "name": "Dmg (1d6/5d6)+...",
+      "page": 0,
+      "toggleEffects": {
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "596px",
+      "uiName": "Claw Dmg",
+      "value": "0",
+      "width": "221px"
+    },
+    "140": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nInstantaneous\n\nWith a melee touch attack you blast a single creature and disrupt any magic controlling it. The target takes 2d8 points of damage + 1 point per caster level (maximum +15). In addition, you make a dispel check against any magic jar effect (including a ghost‘s malevolence ability) or enchantment (compulsion) spells on the target creature, starting with the highest level spells and proceeding to lower level spells. Treat this as a targeted dispel magic spell, except cast out can dispel one such spell for every four caster levels you possess. A successful Will save halves the damage and limits the dispelling to a single spell or effect.\n\nCast Out!",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "29px",
+      "id": "140",
+      "left": "35px",
+      "locked": true,
+      "name": "Cast Out",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "614px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "152px"
+    },
+    "141": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "10 Minutes\nDay per level\n\nGhost Brand",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "141",
+      "left": "345px",
+      "locked": true,
+      "name": "Ghost Brand",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "686px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "180px"
+    },
+    "142": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per level\n\nGhost Whip ",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "142",
+      "left": "339px",
+      "locked": true,
+      "name": "Ghost Whip",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "288px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "156px"
+    },
+    "143": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nProtection from Evil",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "143",
+      "left": "337px",
+      "locked": true,
+      "name": "Pro-Evil Communal",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "320px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "168px"
+    },
+    "144": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nProtection from good",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "144",
+      "left": "31px",
+      "locked": true,
+      "name": "Protection From Good",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "334px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "177px"
+    },
+    "145": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nInstantaneous\n\nBreath of Life",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "145",
+      "left": "26px",
+      "locked": true,
+      "name": "Breath of Life",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "129px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "193px"
+    },
+    "146": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard\nHour Per Level\n\nGreater Magic Fang",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "28px",
+      "id": "146",
+      "left": "34px",
+      "locked": true,
+      "name": "G. Magic Fang",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "646px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "169px"
+    },
+    "147": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "height": "62px",
+      "id": "147",
+      "left": "414px",
+      "locked": true,
+      "name": "B. Charm",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "72px",
+      "uiName": "Unnamed",
+      "value": "4/4",
+      "width": "69px"
+    },
+    "148": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per level\n\nElemental Touch",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "148",
+      "left": "337px",
+      "locked": true,
+      "name": "Elemental Touch",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "357px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "174px"
+    },
+    "149": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nRound per level\n\nShield of Darkness",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "28px",
+      "id": "149",
+      "left": "33px",
+      "locked": true,
+      "name": "Shield of Darkness",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "673px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "169px"
+    },
+    "15": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 7,
+      "height": "30px",
+      "id": "15",
+      "left": "335px",
+      "locked": true,
+      "name": "Dmg (1d4/1d4+4d6)+...",
+      "page": 0,
+      "toggleEffects": {
+        "3": [
+          [
+            1,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Attack",
+      "top": "635px",
+      "uiName": "Bite Dmg",
+      "value": "0",
+      "width": "223px"
+    },
+    "150": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nShield of Wings",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "150",
+      "left": "34px",
+      "locked": true,
+      "name": "Shield of Wings",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "699px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "160px"
+    },
+    "151": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "One Round\nMinute per level\n\nVampiric Hunger",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "151",
+      "left": "34px",
+      "locked": true,
+      "name": "Vampiric Hunger",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "731px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "156px"
+    },
+    "152": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\n Angelic Aspect",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "152",
+      "left": "34px",
+      "locked": true,
+      "name": "Angelic Aspect",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "761px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "158px"
+    },
+    "153": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\n8 Hours\n\nKeep Watch",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "153",
+      "left": "31px",
+      "locked": true,
+      "name": "Keep Watch",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "384px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "172px"
+    },
+    "154": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Standard Action\nMinute per level\n\nMighty Strength",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "48px",
+      "id": "154",
+      "left": "344px",
+      "locked": true,
+      "name": "Mighty Strength",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "737px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "155": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "3 rounds\nInstant\n\nLesser restoration dispels any magical effects reducing one of the subject’s ability scores or cures 1d4 points of temporary ability damage to one of the subject’s ability scores. It also eliminates any fatigue suffered by the character, and improves an exhausted condition to fatigued. It does not restore permanent ability drain.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "155",
+      "left": "31px",
+      "locked": true,
+      "name": "Lesser Restoration",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "417px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "168px"
+    },
+    "156": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Cornelius T. Gnome, origianlly owned by.\n\nOld and Tattered.",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "48px",
+      "id": "156",
+      "left": "49px",
+      "locked": true,
+      "name": "Item Stolen",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "129px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "169px"
+    },
+    "157": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Invented Memory Crystals\n\nThe Surname \"Gnome\" is culturally taken on by famous gnomes who do something big",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "49px",
+      "id": "157",
+      "left": "60px",
+      "locked": true,
+      "name": "Cornelius T Gnome",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "212px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "174px"
+    },
+    "158": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Wall of Force\n\nTeleportation limited to a single spot\n\nTrapped in the inside, traps won't go off for James or Cherish (direct bloodkin), also disabled partially based on open door",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "158",
+      "left": "288px",
+      "locked": true,
+      "name": "Vault",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "125px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "160px"
+    },
+    "159": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "He was gone when the robbery happened.\n\nReturned to check on a contract when he noted ransacking (thief didn't know exact location).",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "59px",
+      "id": "159",
+      "left": "340px",
+      "locked": true,
+      "name": "On the day of...",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "279px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "166px"
+    },
+    "16": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "\nDashing Rescue:\n Spend 1 Resonance point as an immediate action when an ally is targeted by an attack or included in the area of a harmful effect in order to move up to his speed. At any point during this movement, he may pick up the targeted ally and carry them along with him. \n\nThis movement provokes opportunity attacks for the dashing hero, but not for his ally. If this movement removes the ally from the reach or area of the attack or effect targeting him, he is not subject to the attack or effect.\n\nLeap of Evasion:\nInstead of making a reflex save, you can make an acrobatics check to escape the AOE of the effect as an immediate action.\n\nThe DC for this acrobatics check is equal to the number of feet you must move to escape the area, and you can’t travel farther than your normal movement.This movement doesn’t provoke attacks of opportunity from creatures in the area of the effect you are escaping.\n\nMartyr's Necklace: \nWhen an ally would be slain, you can as an immediate action expend 1 resonance point to transfer any amount of HP from yourself or the necklace to your ally.\n\nCape of the Resolute:\nWhen you would be slain, you can expend 5 resonance points as a free action to remain standing. You cannot be healed.\nAt the start of your turn, you can continue expending 5 resonance points to continue acting. You are immune to the staggered condition due to being at zero or less HP. \n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "65px",
+      "id": "16",
+      "left": "302px",
+      "locked": true,
+      "name": "Heroics ",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "250px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "218px"
+    },
+    "160": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Scanned the area and found:\n\nDivination, Abjuration, Illusion\n\nLeft earlier that day",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "58px",
+      "id": "160",
+      "left": "59px",
+      "locked": true,
+      "name": "Lena Cuzio (Mage)",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "381px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "208px"
+    },
+    "161": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Rodan, Guildmaster checks Markov and kin for mind fuckery",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "54px",
+      "id": "161",
+      "left": "344px",
+      "locked": true,
+      "name": "Markov",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "379px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "160px"
+    },
+    "162": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Daughter Sought After, not wed\n\nLord Markov is blocking attempts\n\nLady Markov is ill\n\nPeople are frowning on Lord Markov talking with Ralgeth (Demon Godfather)\n\nJames, respected as he had a public spat regarding dealings with Ralgeth\n\n",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "39px",
+      "id": "162",
+      "left": "60px",
+      "locked": true,
+      "name": "Rumors",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "551px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "147px"
+    },
+    "166": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Fuck the police\n\n-Coverfall -4 diplomacy\n-> Markov Guards -2 Diplomacy",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "166",
+      "left": "300px",
+      "locked": true,
+      "name": "Guards",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "522px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "134px"
+    },
+    "168": {
+      "activeRules": [
+      ],
+      "bibleRef": "0",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 22,
+      "height": "67px",
+      "id": "168",
+      "left": "31px",
+      "locked": true,
+      "name": "Temp HP",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "11px",
+      "uiName": "Unnamed",
+      "value": "22",
+      "width": "77px"
+    },
+    "17": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "43px",
+      "id": "17",
+      "left": "146px",
+      "locked": true,
+      "name": "Skill Sheets",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "4px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "282px"
+    },
+    "18": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "18",
+      "left": "384px",
+      "locked": true,
+      "name": "DEX Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "51px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "145px"
+    },
+    "19": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 6,
+      "height": "30px",
+      "id": "19",
+      "left": "327px",
+      "locked": true,
+      "name": "Climb",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "704px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "255px"
+    },
+    "2": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "",
+      "id": "2",
+      "left": "448px",
+      "locked": true,
+      "name": "Initiative",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "65px",
+      "uiName": "Unnamed",
+      "value": "0",
+      "width": ""
+    },
+    "20": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 6,
+      "height": "29px",
+      "id": "20",
+      "left": "326px",
+      "locked": true,
+      "name": "Swim",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "734px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "255px"
+    },
+    "21": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -1,
+      "height": "30px",
+      "id": "21",
+      "left": "325px",
+      "locked": true,
+      "name": "Bluff",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "399px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "254px"
+    },
+    "22": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "height": "30px",
+      "id": "22",
+      "left": "0px",
+      "locked": true,
+      "name": "Spellcraft",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "781px",
+      "uiName": "Spellcraft",
+      "value": "1",
+      "width": "268px"
+    },
+    "23": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "height": "34px",
+      "id": "23",
+      "left": "333px",
+      "locked": true,
+      "name": "Acrobatics",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "107px",
+      "uiName": "Unnamed",
+      "value": "2",
+      "width": "251px"
+    },
+    "24": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "30px",
+      "id": "24",
+      "left": "333px",
+      "locked": true,
+      "name": "Disable Device",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "141px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "252px"
+    },
+    "25": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -3,
+      "height": "31px",
+      "id": "25",
+      "left": "325px",
+      "locked": true,
+      "name": "Diplomacy",
+      "page": 1,
+      "toggleEffects": {
+        "12": [
+          [
+            -4,
+            "Untyped"
+          ]
+        ]
+      },
+      "toggleLabel": "Skill",
+      "top": "429px",
+      "uiName": "Diplomacy",
+      "value": "2",
+      "width": "255px"
+    },
+    "26": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -1,
+      "height": "30px",
+      "id": "26",
+      "left": "325px",
+      "locked": true,
+      "name": "Disguise",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "459px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "27": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 1,
+      "height": "32px",
+      "id": "27",
+      "left": "2px",
+      "locked": true,
+      "name": "Appraise",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "385px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "259px"
+    },
+    "28": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "31px",
+      "id": "28",
+      "left": "332px",
+      "locked": true,
+      "name": "Escape Artist",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "169px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "29": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "29px",
+      "id": "29",
+      "left": "333px",
+      "locked": true,
+      "name": "Fly",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "199px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "257px"
+    },
+    "3": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "95",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 7,
+      "height": "",
+      "id": "3",
+      "left": "24px",
+      "locked": true,
+      "name": "Fort",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "204px",
+      "uiName": "Fortitude",
+      "value": "7",
+      "width": ""
+    },
+    "30": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "31px",
+      "id": "30",
+      "left": "333px",
+      "locked": true,
+      "name": "Ride",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "227px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "31": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 6,
+      "height": "29px",
+      "id": "31",
+      "left": "4px",
+      "locked": true,
+      "name": "Profession( Alchemist)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "166px",
+      "uiName": "Proffesion (Alchemist)",
+      "value": "1",
+      "width": "258px"
+    },
+    "32": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 3,
+      "height": "29px",
+      "id": "32",
+      "left": "4px",
+      "locked": true,
+      "name": "Sense Motive",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "195px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "259px"
+    },
+    "33": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 8,
+      "height": "32px",
+      "id": "33",
+      "left": "5px",
+      "locked": true,
+      "name": "Survival",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Skill",
+      "top": "224px",
+      "uiName": "Survival",
+      "value": "3",
+      "width": "259px"
+    },
+    "34": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "50px",
+      "id": "34",
+      "left": "361px",
+      "locked": true,
+      "name": "STR Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "644px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "173px"
+    },
+    "35": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "50px",
+      "id": "35",
+      "left": "33px",
+      "locked": true,
+      "name": "Int",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "324px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "179px"
+    },
+    "36": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "49px",
+      "id": "36",
+      "left": "51px",
+      "locked": true,
+      "name": "WIS Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "52px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "145px"
+    },
+    "37": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "55px",
+      "id": "37",
+      "left": "381px",
+      "locked": true,
+      "name": "CHA Skills",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "332px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "147px"
+    },
+    "38": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 3,
+      "height": "31px",
+      "id": "38",
+      "left": "333px",
+      "locked": true,
+      "name": "Sleight of Hand",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "257px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "257px"
+    },
+    "39": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 3,
+      "height": "32px",
+      "id": "39",
+      "left": "332px",
+      "locked": true,
+      "name": "Stealth",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "287px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "256px"
+    },
+    "4": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 24,
+      "height": "",
+      "id": "4",
+      "left": "145px",
+      "locked": true,
+      "name": "AC",
+      "page": 0,
+      "toggleEffects": {
+        "4": [
+          [
+            2,
+            "Natural_Armor"
+          ]
+        ],
+        "6": [
+          [
+            7,
+            "Armor"
+          ]
+        ],
+        "8": [
+          [
+            3,
+            "Deflection"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "85px",
+      "uiName": "AC",
+      "value": "10",
+      "width": ""
+    },
+    "40": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -1,
+      "height": "31px",
+      "id": "40",
+      "left": "324px",
+      "locked": true,
+      "name": "Handle Animal",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "490px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "41": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 6,
+      "height": "30px",
+      "id": "41",
+      "left": "3px",
+      "locked": true,
+      "name": "Perception",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "137px",
+      "uiName": "Unnamed",
+      "value": "4",
+      "width": "260px"
+    },
+    "42": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "30px",
+      "id": "42",
+      "left": "4px",
+      "locked": true,
+      "name": "Heal",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "106px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "261px"
+    },
+    "43": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          "-1"
+        ],
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "32px",
+      "id": "43",
+      "left": "324px",
+      "locked": true,
+      "name": "Intimidate",
+      "page": 1,
+      "toggleEffects": {
+        "12": [
+          [
+            4,
+            "Untyped"
+          ]
+        ],
+        "28": [
+          [
+            2,
+            "Circumstance"
+          ]
+        ]
+      },
+      "toggleLabel": "Skill",
+      "top": "519px",
+      "uiName": "Intimidate",
+      "value": "2",
+      "width": "259px"
+    },
+    "44": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -1,
+      "height": "32px",
+      "id": "44",
+      "left": "325px",
+      "locked": true,
+      "name": "Perform",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "551px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "45": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "93",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": -1,
+      "height": "30px",
+      "id": "45",
+      "left": "325px",
+      "locked": true,
+      "name": "Use Magic Device",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "584px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "258px"
+    },
+    "46": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "46",
+      "left": "2px",
+      "locked": true,
+      "name": "Craft ( )",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "415px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "260px"
+    },
+    "47": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 4,
+      "height": "32px",
+      "id": "47",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Arcana)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "444px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "263px"
+    },
+    "48": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "30px",
+      "id": "48",
+      "left": "1px",
+      "locked": true,
+      "name": "Knowledge (Dungeoneering)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "474px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "263px"
+    },
+    "49": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "49",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Engineering)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "503px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "264px"
+    },
+    "5": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "92",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "height": "93px",
+      "id": "5",
+      "left": "24px",
+      "locked": true,
+      "name": "Will",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "426px",
+      "uiName": "Will",
+      "value": "3",
+      "width": "101px"
+    },
+    "50": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "50",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Geography)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "532px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "265px"
+    },
+    "51": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "51",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (History)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "564px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "266px"
+    },
+    "52": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 2,
+      "height": "33px",
+      "id": "52",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Local)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "596px",
+      "uiName": "Unnamed",
+      "value": "2",
+      "width": "266px"
+    },
+    "53": {
+      "activeRules": [
+        "classSkill"
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "height": "34px",
+      "id": "53",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Nature)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "628px",
+      "uiName": "Unnamed",
+      "value": "2",
+      "width": "267px"
+    },
+    "54": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "32px",
+      "id": "54",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Nobility)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "660px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "267px"
+    },
+    "55": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "33px",
+      "id": "55",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Planes)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "690px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "268px"
+    },
+    "56": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 1,
+      "height": "31px",
+      "id": "56",
+      "left": "0px",
+      "locked": true,
+      "name": "Knowledge (Religion)",
+      "page": 1,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "722px",
+      "uiName": "Unnamed",
+      "value": "1",
+      "width": "268px"
+    },
+    "57": {
+      "activeRules": [
+      ],
+      "bibleRef": "4",
+      "description": "Linguistics",
+      "drawsFrom": [
+        [
+          "91",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 14,
+      "height": "31px",
+      "id": "57",
+      "left": "0px",
+      "locked": true,
+      "name": "Linguistics",
+      "page": 1,
+      "toggleEffects": {
+        "2": [
+          [
+            5,
+            "Untyped"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "752px",
+      "uiName": "Linguistics",
+      "value": "9",
+      "width": "269px"
+    },
+    "58": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "62px",
+      "id": "58",
+      "left": "160px",
+      "locked": true,
+      "name": "Spell Book",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "6px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "256px"
+    },
+    "59": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "47px",
+      "id": "59",
+      "left": "186px",
+      "locked": true,
+      "name": "SpellBook Second Page",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "8px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "210px"
+    },
+    "6": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 5,
+      "height": "",
+      "id": "6",
+      "left": "24px",
+      "locked": true,
+      "name": "Ref",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Saves",
+      "top": "313px",
+      "uiName": "Reflex",
+      "value": "3",
+      "width": ""
+    },
+    "60": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "60px",
+      "id": "60",
+      "left": "156px",
+      "locked": true,
+      "name": "Feats & Traits",
+      "page": 4,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "11px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "271px"
+    },
+    "61": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "55px",
+      "id": "61",
+      "left": "144px",
+      "locked": true,
+      "name": "Base Stats",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "0px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "325px"
+    },
+    "62": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 22,
+      "height": "100px",
+      "id": "62",
+      "left": "20px",
+      "locked": true,
+      "name": "STR",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "60px",
+      "uiName": "Strength",
+      "value": "22",
+      "width": "100px"
+    },
+    "63": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 11,
+      "height": "100px",
+      "id": "63",
+      "left": "16px",
+      "locked": true,
+      "name": "CON",
+      "page": 5,
+      "toggleEffects": {
+        "30": [
+          [
+            -3,
+            "Untyped"
+          ]
+        ],
+        "4": [
+          [
+            4,
+            "Untyped"
+          ]
+        ]
+      },
+      "toggleLabel": "Ability Score",
+      "top": "299px",
+      "uiName": "Constitution",
+      "value": "10",
+      "width": "100px"
+    },
+    "64": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "100px",
+      "id": "64",
+      "left": "19px",
+      "locked": true,
+      "name": "INT",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "433px",
+      "uiName": "Intelligence",
+      "value": "10",
+      "width": "100px"
+    },
+    "65": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 14,
+      "height": "100px",
+      "id": "65",
+      "left": "18px",
+      "locked": true,
+      "name": "DEX",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Ability Score",
+      "top": "177px",
+      "uiName": "Dexterity",
+      "value": "14",
+      "width": "100px"
+    },
+    "66": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 12,
+      "finalMod": 14,
+      "height": "103px",
+      "id": "66",
+      "left": "15px",
+      "locked": true,
+      "name": "WIS",
+      "page": 5,
+      "toggleEffects": {
+        "0": [
+          [
+            2,
+            "Enhancement"
+          ]
+        ]
+      },
+      "toggleLabel": "Ability Score",
+      "top": "557px",
+      "uiName": "Wisdom",
+      "value": "12",
+      "width": "102px"
+    },
+    "67": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 10,
+      "finalMod": 9,
+      "height": "100px",
+      "id": "67",
+      "left": "16px",
+      "locked": true,
+      "name": "CHA",
+      "page": 5,
+      "toggleEffects": {
+        "30": [
+          [
+            3,
+            "Untyped"
+          ]
+        ]
+      },
+      "toggleLabel": "Ability Score",
+      "top": "686px",
+      "uiName": "Charisma",
+      "value": "6",
+      "width": "100px"
+    },
+    "68": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 8,
+      "height": "100px",
+      "id": "68",
+      "left": "352px",
+      "locked": true,
+      "name": "BAB",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Attack",
+      "top": "510px",
+      "uiName": "BAB",
+      "value": "8",
+      "width": "100px"
+    },
+    "69": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "description": "https://www.d20pfsrd.com/gamemastering/combat/#TOC-Combat-Maneuver-Bonus",
+      "drawsFrom": [
+        [
+          "68",
+          1
+        ],
+        [
+          "96",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 16,
+      "height": "100px",
+      "id": "69",
+      "left": "478px",
+      "locked": true,
+      "name": "CMB",
+      "page": 5,
+      "toggleEffects": {
+        "5": [
+          [
+            2,
+            "Morale"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "505px",
+      "uiName": "CMB",
+      "value": "0",
+      "width": "100px"
+    },
+    "7": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 15,
+      "height": "",
+      "id": "7",
+      "left": "145px",
+      "locked": true,
+      "name": "TouchAC",
+      "page": 0,
+      "toggleEffects": {
+        "8": [
+          [
+            3,
+            "Deflection"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "202px",
+      "uiName": "Touch AC",
+      "value": "10",
+      "width": ""
+    },
+    "70": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "description": "https://www.d20pfsrd.com/gamemastering/combat/#TOC-Combat-Maneuver-Defense",
+      "drawsFrom": [
+        [
+          "68",
+          1
+        ],
+        [
+          "96",
+          1
+        ],
+        [
+          "94",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 31,
+      "height": "100px",
+      "id": "70",
+      "left": "468px",
+      "locked": true,
+      "name": "CMD",
+      "page": 5,
+      "toggleEffects": {
+        "5": [
+          [
+            2,
+            "Morale"
+          ]
+        ],
+        "8": [
+          [
+            3,
+            "Deflection"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "625px",
+      "uiName": "CMD",
+      "value": "10",
+      "width": "100px"
+    },
+    "71": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "102px",
+      "id": "71",
+      "left": "262px",
+      "locked": true,
+      "name": "Light",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "154px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "102px"
+    },
+    "72": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "61px",
+      "id": "72",
+      "left": "314px",
+      "locked": true,
+      "name": "Carrying Capacity",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "88px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "236px"
+    },
+    "73": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "100px",
+      "id": "73",
+      "left": "373px",
+      "locked": true,
+      "name": "Medium",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "153px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "100px"
+    },
+    "74": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "100px",
+      "id": "74",
+      "left": "485px",
+      "locked": true,
+      "name": "Heavy",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "155px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "100px"
+    },
+    "75": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "100px",
+      "id": "75",
+      "left": "484px",
+      "locked": true,
+      "name": "Over head",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "265px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "100px"
+    },
+    "76": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "100px",
+      "id": "76",
+      "left": "373px",
+      "locked": true,
+      "name": "Off Ground",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "264px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "100px"
+    },
+    "77": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "100px",
+      "id": "77",
+      "left": "263px",
+      "locked": true,
+      "name": "Push/Drag",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "263px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "100px"
+    },
+    "78": {
+      "activeRules": [
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "70",
+          1
+        ]
+      ],
+      "finalAblScore": 0,
+      "finalMod": 31,
+      "height": "",
+      "id": "78",
+      "left": "143px",
+      "locked": true,
+      "name": "CMD",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "423px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": ""
+    },
+    "79": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "79",
+      "left": "337px",
+      "locked": true,
+      "name": "SLA",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "83px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "207px"
+    },
+    "8": {
+      "activeRules": [
+      ],
+      "bibleRef": "2",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 22,
+      "height": "",
+      "id": "8",
+      "left": "145px",
+      "locked": true,
+      "name": "Flat-Footed",
+      "page": 0,
+      "toggleEffects": {
+        "4": [
+          [
+            2,
+            "Natural_Armor"
+          ]
+        ],
+        "6": [
+          [
+            7,
+            "Armor"
+          ]
+        ],
+        "8": [
+          [
+            3,
+            "Deflection"
+          ]
+        ]
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "313px",
+      "uiName": "Flat-Footed AC",
+      "value": "10",
+      "width": ""
+    },
+    "80": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "31px",
+      "id": "80",
+      "left": "10px",
+      "locked": true,
+      "name": "LV 1",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "250px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "221px"
+    },
+    "81": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "81",
+      "left": "325px",
+      "locked": true,
+      "name": "LV 2",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "248px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "233px"
+    },
+    "82": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "35px",
+      "id": "82",
+      "left": "6px",
+      "locked": true,
+      "name": "LV 3",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "462px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "224px"
+    },
+    "83": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "35px",
+      "id": "83",
+      "left": "326px",
+      "locked": true,
+      "name": "LV 4",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "460px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "223px"
+    },
+    "84": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "84",
+      "left": "24px",
+      "locked": true,
+      "name": "LV 5",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "83px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "201px"
+    },
+    "85": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "85",
+      "left": "327px",
+      "locked": true,
+      "name": "LV 6",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "79px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "212px"
+    },
+    "86": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "86",
+      "left": "19px",
+      "locked": true,
+      "name": "LV 7",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "310px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "207px"
+    },
+    "87": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "41px",
+      "id": "87",
+      "left": "305px",
+      "locked": true,
+      "name": "LV 8",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "305px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "249px"
+    },
+    "88": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "37px",
+      "id": "88",
+      "left": "165px",
+      "locked": true,
+      "name": "LV 9",
+      "page": 3,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "515px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "192px"
+    },
+    "89": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "89",
+      "left": "146px",
+      "locked": true,
+      "name": "Character Notes",
+      "page": 6,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "13px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "250px"
+    },
+    "9": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "34px",
+      "id": "9",
+      "left": "13px",
+      "locked": true,
+      "name": "Cantrips",
+      "page": 2,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "81px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "233px"
+    },
+    "90": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "52px",
+      "id": "90",
+      "left": "170px",
+      "locked": true,
+      "name": "Inventory",
+      "page": 7,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "14px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "254px"
+    },
+    "91": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "64",
+          1
+        ]
+      ],
+      "finalAblScore": 10,
+      "finalMod": 10,
+      "height": "",
+      "id": "91",
+      "left": "143px",
+      "locked": true,
+      "name": "Int Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "434px",
+      "uiName": "Int Mod",
+      "value": 0,
+      "width": ""
+    },
+    "92": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "66",
+          1
+        ]
+      ],
+      "finalAblScore": 14,
+      "finalMod": 14,
+      "height": "",
+      "id": "92",
+      "left": "141px",
+      "locked": true,
+      "name": "Wis Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "556px",
+      "uiName": "Wis Mod",
+      "value": 0,
+      "width": ""
+    },
+    "93": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "67",
+          1
+        ]
+      ],
+      "finalAblScore": 6,
+      "finalMod": 9,
+      "height": "",
+      "id": "93",
+      "left": "136px",
+      "locked": true,
+      "name": "Cha Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "684px",
+      "uiName": "Cha Mod",
+      "value": 0,
+      "width": ""
+    },
+    "94": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "65",
+          1
+        ]
+      ],
+      "finalAblScore": 14,
+      "finalMod": 14,
+      "height": "",
+      "id": "94",
+      "left": "144px",
+      "locked": true,
+      "name": "Dex Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "174px",
+      "uiName": "Dex Mod",
+      "value": 0,
+      "width": ""
+    },
+    "95": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "63",
+          1
+        ]
+      ],
+      "finalAblScore": 14,
+      "finalMod": 11,
+      "height": "",
+      "id": "95",
+      "left": "147px",
+      "locked": true,
+      "name": "Con Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "296px",
+      "uiName": "Con Mod",
+      "value": 0,
+      "width": ""
+    },
+    "96": {
+      "activeRules": [
+        "abilityScore"
+      ],
+      "bibleRef": "5",
+      "drawsFrom": [
+        [
+          "62",
+          1
+        ]
+      ],
+      "finalAblScore": 22,
+      "finalMod": 22,
+      "height": "",
+      "id": "96",
+      "left": "141px",
+      "locked": true,
+      "name": "Str Mod",
+      "page": 5,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "58px",
+      "uiName": "Strength Mod",
+      "value": 0,
+      "width": ""
+    },
+    "97": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "When you would be slain, you can expend 5 resonance points as a free action to remain standing. You cannot be healed. At the start of your turn, you can continue expending 5 resonance points to continue acting. You are immune to the staggered condition due to being at zero or less HP. Muleback Cord Add-on for moar carrying capacity",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "45px",
+      "id": "97",
+      "left": "32px",
+      "locked": true,
+      "name": "Cape of the Resolute",
+      "page": 7,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "98px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "225px"
+    },
+    "98": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "61px",
+      "id": "98",
+      "left": "46px",
+      "locked": true,
+      "name": "Title",
+      "page": 7,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "174px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "225px"
+    },
+    "99": {
+      "activeRules": [
+      ],
+      "bibleRef": "1",
+      "description": "Four times per day, the wearer can add 1d6 to the result of a Dexterity-, Intelligence-, or Charisma-based skill check as a free action. The wearer can do this only once per check.\n\nLupine Robe",
+      "drawsFrom": [
+      ],
+      "finalAblScore": 0,
+      "finalMod": 0,
+      "height": "49px",
+      "id": "99",
+      "left": "300px",
+      "locked": true,
+      "name": "Lupine Robe",
+      "page": 0,
+      "toggleEffects": {
+      },
+      "toggleLabel": "Uncategorized",
+      "top": "326px",
+      "uiName": "Unnamed",
+      "value": 0,
+      "width": "132px"
+    }
+  },
+  "rules": {
+    "abilityScores": {
+      "description": "Ability scores work a little differently than most other stats in Pathfinder as the modifier they offer isn't their final score. For example a 12 Strength translates to a modifier of +1.",
+      "id": 0,
+      "label": "abilityScore",
+      "name": "Ability Scores"
+    },
+    "classSkill": {
+      "description": "In Pathfinder certain skills are considered to be 'in class', essentially meaning that your character has an innate aptitude toward this skill. If a skill is in class the first rank placed in that skill (a base input of at least 1) will give a +3 bonus.",
+      "id": 1,
+      "label": "classSkill",
+      "name": "Class Skill"
+    }
+  },
+  "toggles": {
+    "0": {
+      "bar": 0,
+      "description": "Whenever the wearer suffers a fear effect, she may spend an immediate action to reduce the severity of the fear effect by one step.\n\n If the wearer would become panicked, she is instead frightened. If she would become frightened, she is instead shaken. If the wearer would become shaken, the effect is negated entirely. The wearer can use this ability up to three times per day.\n\nHeadband of Unshakeable Resolve",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 66
+        }
+      },
+      "icon": "https://i.pinimg.com/736x/53/a7/3a/53a73ab6b14d2cc01672431f7cac33e4.jpg",
+      "id": 0,
+      "name": "Headband of Unshakeable Resolve",
+      "slotNum": 0,
+      "status": "checked"
+    },
+    "1": {
+      "bar": 0,
+      "description": "Like a hat of disguise, this garment allows its wearer to alter her appearance. It functions as an alter self spell (as opposed to disguise self). The hat becomes a part of the disguise and can be a hat, a helmet, a headscarf, and so forth.\n\nGreater Hat of disguise.",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Size",
+          "id": 0,
+          "targetDraggable": 62
+        }
+      },
+      "icon": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/5026/604/1000/1000/636807012472194028.png",
+      "id": 1,
+      "name": "Hat of Disguise, Greater",
+      "slotNum": 1,
+      "status": ""
+    },
+    "10": {
+      "bar": 2,
+      "description": "Increases enhancement Bonus on one weapon (including naturals) by 2 with an additional 4d6 of bonus damage.\n\nUsable as a swift action, can be dismissed as a free\n\nGreater Bane",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 12
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 14
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 103
+        },
+        "3": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 3,
+          "targetDraggable": 104
+        }
+      },
+      "icon": "http://dnd.eizzn.com/files/2012/08/Banesymbol.jpeg",
+      "id": 10,
+      "name": "Greater Bane (Claw)",
+      "slotNum": 0,
+      "status": ""
+    },
+    "11": {
+      "bar": 2,
+      "description": "Increases enhancement Bonus on one weapon (including naturals) by 2 with an additional 4d6 of bonus damage.\n\nUsable as a swift action, can be dismissed as a free\n\nGreater Bane",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 13
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 15
+        }
+      },
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPcbo_0liTvqo2DgnUihyeOLvnyA_G-ljQtjjhjmxEXVIpmA7XMg",
+      "id": 11,
+      "name": "Greater Bane (Fangs)",
+      "slotNum": 1,
+      "status": ""
+    },
+    "12": {
+      "bar": 3,
+      "description": "Your arm is white and oddly shaped compared to your other arm. If visible, you suffer a -4 penalty to diplomacy but a +4 bonus to intimidate. At the start of the day, roll 1d4. You lose that many resonance points. You gain a claw primary natural attack for 1d6 damage with the grab property. You gain the constrict ability for 3d6 piercing damage. If the target is below 50% hitpoints the constrict instead deals 6d6 damage. You can spend a resonance point as a free action to restore hitpoints equal to the damage you deal with this claw attack and constrict for the turn (damage done in excess of the target’s hitpoints doesn’t count). There are other effects. A voice in your head tells you this isn’t right. You stopped heeding it after a while.",
+      "effects": {
+        "0": {
+          "effectMod": -4,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 25
+        },
+        "1": {
+          "effectMod": 4,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 43
+        }
+      },
+      "icon": "http://img01.deviantart.net/013d/i/2009/097/8/f/nero__s_arm_by_bryansayshi.jpg",
+      "id": 12,
+      "name": "Vampiric Arm",
+      "slotNum": 0,
+      "status": "checked"
+    },
+    "13": {
+      "bar": 3,
+      "description": "https://www.d20pfsrd.com/classes/core-classes/monk/archetypes/paizo-monk-archetypes/maneuver-master/",
+      "effects": {
+        "0": {
+          "effectMod": 3,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 69
+        }
+      },
+      "icon": "https://cdn.shopify.com/s/files/1/1028/6695/products/2611_Monk.jpg?v=1447482922",
+      "id": 13,
+      "name": "Flurry of Manuevers",
+      "slotNum": 1,
+      "status": ""
+    },
+    "14": {
+      "bar": 3,
+      "description": "https://www.d20pfsrd.com/bestiary/monster-listings/outsiders/demon/demon-abrikandilu/",
+      "effects": {
+        "0": {
+          "effectMod": 5,
+          "effectType": "Racial",
+          "id": 0,
+          "targetDraggable": 110
+        }
+      },
+      "icon": "http://static.comicvine.com/uploads/original/11124/111242221/4691738-4551356551-27766.jpg",
+      "id": 14,
+      "name": "Demon Infusion",
+      "slotNum": 2,
+      "status": "checked"
+    },
+    "15": {
+      "bar": 3,
+      "description": "While in Snapping Turtle Style with one free hand, gain +1 shield bonus to AC.",
+      "effects": {
+        "0": {
+          "effectMod": 1,
+          "effectType": "Shield",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 1,
+          "effectType": "Shield",
+          "id": 1,
+          "targetDraggable": 8
+        }
+      },
+      "icon": "https://3.bp.blogspot.com/-xifC4XjTlME/W1KKCP4u1JI/AAAAAAAA8wM/GowWB-DG4t4dYlz7MeGGrQMcxsFYOsnCACLcBGAs/s1600/Teenage-Mutant-Ninja-Turtles-Leonardo-IDW-Publishing-TMNT-Nickelodeon-Nick_3.jpg",
+      "id": 15,
+      "name": "Snapping Turtle Style",
+      "slotNum": 3,
+      "status": ""
+    },
+    "16": {
+      "bar": 1,
+      "description": "",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Shield",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Shield",
+          "id": 1,
+          "targetDraggable": 8
+        },
+        "2": {
+          "effectMod": -4,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://vignette.wikia.nocookie.net/findle/images/5/52/Darkwood_Shield.jpg/revision/latest?cb=20180719211727",
+      "id": 16,
+      "name": "Darkwood Shield",
+      "slotNum": 3,
+      "status": ""
+    },
+    "17": {
+      "bar": 4,
+      "description": "Meels",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Circumstance",
+          "id": 0,
+          "targetDraggable": 110
+        }
+      },
+      "icon": "https://i.pinimg.com/originals/2b/5b/f8/2b5bf8355426a283531c9b69123907dd.jpg",
+      "id": 17,
+      "name": "Meels",
+      "slotNum": 0,
+      "status": "checked"
+    },
+    "18": {
+      "bar": 4,
+      "description": "",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 13
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 12
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://www.tribality.com/wp-content/uploads/2014/10/expert-flank.jpg",
+      "id": 18,
+      "name": "Flanking",
+      "slotNum": 1,
+      "status": ""
+    },
+    "19": {
+      "bar": 4,
+      "description": "",
+      "effects": {
+        "0": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 13
+        },
+        "1": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 12
+        },
+        "2": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://starwarsblog.starwars.com/wp-content/uploads/sites/6/2017/08/star-wars-episode-3-obi-wan-mustafar.jpg",
+      "id": 19,
+      "name": "High Ground",
+      "slotNum": 2,
+      "status": ""
+    },
+    "2": {
+      "bar": 0,
+      "description": "The wearer of these spectacles gains the ability to better understand written material and unravel the language of contracts. The wearer gains a +5 bonus on Linguistics checks to decipher writing, detect forgeries, research in a library, research an infernal contract, or attempt similar types of examinations.\n\nAdditionally, he is automatically aware if a contract he’s examining has any deliberate obfuscations or loopholes, though he might not know exactly what they are.\n\nSpecs of Comprehension",
+      "effects": {
+        "0": {
+          "effectMod": 5,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 57
+        }
+      },
+      "icon": "https://d3ieicw58ybon5.cloudfront.net/ex/253.253/shop/product/79b757b3474a49339c9ff97c3ade2727.jpg",
+      "id": 2,
+      "name": "Spectacles of Comprehension",
+      "slotNum": 2,
+      "status": "checked"
+    },
+    "20": {
+      "bar": 5,
+      "description": "Standard Action\nMinute per level\n\nMighty Strength",
+      "effects": {
+        "0": {
+          "effectMod": 8,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 62
+        }
+      },
+      "icon": "https://fotos.subefotos.com/e3cc4721b19c903e5e8b73f074e1a335o.jpg",
+      "id": 20,
+      "name": "Mighty Strength",
+      "slotNum": 0,
+      "status": ""
+    },
+    "21": {
+      "bar": 5,
+      "description": "Standard Action\nRound per level\n\n+2 sacred bonus on attack rolls against undead and deals +1d6 points of damage on a successful hit against such foes; against incorporeal undead, it functions as if it had the ghost touch weapon special ability. The weapon automatically confirms critical hits against foes that are vulnerable to sunlight.\n\nBlade of light",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Sacred",
+          "id": 0,
+          "targetDraggable": 13
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Sacred",
+          "id": 1,
+          "targetDraggable": 12
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Sacred",
+          "id": 2,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://vignette.wikia.nocookie.net/fairytailfanon/images/b/b2/Magic_Sword_A.PNG/revision/latest?cb=20170115163003",
+      "id": 21,
+      "name": "Blade of Light",
+      "slotNum": 1,
+      "status": ""
+    },
+    "22": {
+      "bar": 5,
+      "description": "Standard\nHour Per Level\n\n(Can affect Bite instead but claw generally more efficient)\n\nGreater Magic Fang",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 12
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Enhancement",
+          "id": 1,
+          "targetDraggable": 14
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Enhancement",
+          "id": 2,
+          "targetDraggable": 103
+        },
+        "3": {
+          "effectMod": 2,
+          "effectType": "Enhancement",
+          "id": 3,
+          "targetDraggable": 104
+        }
+      },
+      "icon": "http://orig14.deviantart.net/2d33/f/2013/252/5/c/udyr_league_of_legends_by_leekent-d6lq6o2.jpg",
+      "id": 22,
+      "name": "G. Magic Fang",
+      "slotNum": 2,
+      "status": ""
+    },
+    "23": {
+      "bar": 5,
+      "description": "",
+      "effects": {
+        "0": {
+          "effectMod": 1,
+          "effectType": "Dodge",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 1,
+          "effectType": "Dodge",
+          "id": 1,
+          "targetDraggable": 7
+        },
+        "2": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 13
+        },
+        "3": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 3,
+          "targetDraggable": 12
+        },
+        "4": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 4,
+          "targetDraggable": 103
+        },
+        "5": {
+          "effectMod": 1,
+          "effectType": "Dodge",
+          "id": 5,
+          "targetDraggable": 6
+        },
+        "6": {
+          "effectMod": 1,
+          "effectType": "Dodge",
+          "id": 6,
+          "targetDraggable": 70
+        }
+      },
+      "icon": "https://media.comicbook.com/2018/07/mha-s3-midoriya-1122664-640x320.jpeg",
+      "id": 23,
+      "name": "Channel Vigor (Haste)",
+      "slotNum": 3,
+      "status": ""
+    },
+    "24": {
+      "bar": 5,
+      "description": "Standard Action\nMinute per level\n\nProtection from Evil",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Deflection",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Resistance",
+          "id": 1,
+          "targetDraggable": 3
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Resistance",
+          "id": 2,
+          "targetDraggable": 5
+        },
+        "3": {
+          "effectMod": 2,
+          "effectType": "Resistance",
+          "id": 3,
+          "targetDraggable": 6
+        }
+      },
+      "icon": "https://media-waterdeep.cursecdn.com/attachments/0/686/c3cleric2.png",
+      "id": 24,
+      "name": "Protection From X",
+      "slotNum": 4,
+      "status": ""
+    },
+    "25": {
+      "bar": 5,
+      "description": "One Round\nMinute per level\n\nspace of 10 feet and a natural reach of 10 feet\n\nWeapons: d4->d6-d8\n\nEnlarge Person",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Size",
+          "id": 0,
+          "targetDraggable": 62
+        },
+        "1": {
+          "effectMod": -2,
+          "effectType": "Size",
+          "id": 1,
+          "targetDraggable": 65
+        },
+        "2": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 2,
+          "targetDraggable": 13
+        },
+        "3": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 3,
+          "targetDraggable": 12
+        },
+        "4": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 4,
+          "targetDraggable": 103
+        },
+        "5": {
+          "effectMod": 1,
+          "effectType": "Untyped",
+          "id": 5,
+          "targetDraggable": 69
+        },
+        "6": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 6,
+          "targetDraggable": 4
+        },
+        "7": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 7,
+          "targetDraggable": 8
+        },
+        "8": {
+          "effectMod": -1,
+          "effectType": "Untyped",
+          "id": 8,
+          "targetDraggable": 7
+        }
+      },
+      "icon": "https://vignette.wikia.nocookie.net/oots/images/2/21/OOTS0111.jpeg/revision/latest?cb=20150610025553",
+      "id": 25,
+      "name": "Enlarge Person",
+      "slotNum": 5,
+      "status": ""
+    },
+    "26": {
+      "bar": 3,
+      "description": "Allows a free action grab on claw hit IF target is the same size as Warden",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://previews-graphicriver.imgix.net/files/226874150/preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=5df925dcee434998e035509104397f61",
+      "id": 26,
+      "name": "Grab Quality",
+      "slotNum": 4,
+      "status": "checked"
+    },
+    "27": {
+      "bar": 2,
+      "description": " Standard Action\n10 Minutes per Level\n\nStats are for a Strength Mutagen which Warden defaults to but Dexterity or Constitution Mutagens can also be brewed",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Alchemical",
+          "id": 0,
+          "targetDraggable": 62
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Natural_Armor",
+          "id": 1,
+          "targetDraggable": 4
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Natural_Armor",
+          "id": 2,
+          "targetDraggable": 8
+        },
+        "3": {
+          "effectMod": -2,
+          "effectType": "Alchemical",
+          "id": 3,
+          "targetDraggable": 64
+        }
+      },
+      "icon": "https://i.pinimg.com/originals/63/dd/11/63dd11768540f596b0bf2810ab5753da.jpg",
+      "id": 27,
+      "name": "Mutagen",
+      "slotNum": 2,
+      "status": ""
+    },
+    "28": {
+      "bar": 1,
+      "description": "Sharkskin Intimidation Necklace ",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Circumstance",
+          "id": 0,
+          "targetDraggable": 43
+        }
+      },
+      "icon": "https://66.media.tumblr.com/f27e6f8935dc527e10b934464ed2fecb/tumblr_inline_pag9tcAWKk1r9wm7d_640.jpg",
+      "id": 28,
+      "name": "Masterwork Items",
+      "slotNum": 4,
+      "status": "checked"
+    },
+    "29": {
+      "bar": 2,
+      "description": "The Blood Reservoir of Physical Prowess has 4 charges that can burnt as a standard action to heal PHYSICAL ability score damage or gain a potentially massive burst of stats for 1 turn. \n\nStats on toggle are for Strength and assuming the full +8 bonus",
+      "effects": {
+        "0": {
+          "effectMod": 8,
+          "effectType": "Inherent",
+          "id": 0,
+          "targetDraggable": 62
+        }
+      },
+      "icon": "https://cdn-img-3.wanelo.com/p/f7a/520/c07/e986060ac7fa51664057a91/x354-q80.jpg",
+      "id": 29,
+      "name": "Blood Resevoir",
+      "slotNum": 3,
+      "status": ""
+    },
+    "3": {
+      "bar": 0,
+      "description": "You can sacrifice up to 20 HP to the necklace. When an ally would be slain, you can as an immediate action expend 1 resonance point to transfer any amount of HP from yourself or the necklace to your ally. \n\nA necklace made of red beads the color of blood. You feel a slight heaviness when you wear it. \n\nWhat cause would you give your life for? \n\nCrafted add-on effect: Amulet of mighty Fists I",
+      "effects": {
+        "0": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 0,
+          "targetDraggable": 12
+        },
+        "1": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 1,
+          "targetDraggable": 14
+        },
+        "2": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 2,
+          "targetDraggable": 13
+        },
+        "3": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 3,
+          "targetDraggable": 15
+        },
+        "4": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 4,
+          "targetDraggable": 103
+        },
+        "5": {
+          "effectMod": 1,
+          "effectType": "Enhancement",
+          "id": 5,
+          "targetDraggable": 104
+        }
+      },
+      "icon": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/7/329/1000/1000/636284756948272701.jpeg",
+      "id": 3,
+      "name": "Martyy's Necklace (Mighty Fist I add-on)",
+      "slotNum": 3,
+      "status": "checked"
+    },
+    "30": {
+      "bar": 5,
+      "description": "Curse",
+      "effects": {
+        "0": {
+          "effectMod": -3,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 63
+        },
+        "1": {
+          "effectMod": 3,
+          "effectType": "Untyped",
+          "id": 1,
+          "targetDraggable": 67
+        }
+      },
+      "icon": "https://res.cloudinary.com/metaverse/image/upload/v1548787121/icons8-transition-both-directions-48.png",
+      "id": 30,
+      "name": "Curse",
+      "slotNum": 6,
+      "status": "checked"
+    },
+    "4": {
+      "bar": 0,
+      "description": " Your thoughts resonate with the gem as it slowly merges with your vest. \n\n The spider silk takes on a darker more sinister, but also much more impressive look. As you put it on, you feel strong. Imposing. Unstoppable. You will be dominant. You will not retreat. You will survive. \n\nYou gain +4 Constitution and DR 10/Law\n\nYou gain +2 Natural Armor. \n\nYou are treated as one size larger when attempting to intimidate someone (+4 bonus effectively to medium and below). \n\nYour move speed becomes 10 when moving away from a target that has hit you in combat or has otherwise challenged your dominance. It remains 10 until end of combat. \n\nYou can remove this penalty by taking an AOO from a target that has challenged your dominance (it does not need to connect). ",
+      "effects": {
+        "0": {
+          "effectMod": 4,
+          "effectType": "Untyped",
+          "id": 0,
+          "targetDraggable": 63
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Natural_Armor",
+          "id": 1,
+          "targetDraggable": 4
+        },
+        "2": {
+          "effectMod": 2,
+          "effectType": "Natural_Armor",
+          "id": 2,
+          "targetDraggable": 8
+        }
+      },
+      "icon": "https://i.pinimg.com/originals/cb/35/ce/cb35ce619ffcd6f277fdda735a99e207.jpg",
+      "id": 4,
+      "name": "Demonbear Vest",
+      "slotNum": 4,
+      "status": "checked"
+    },
+    "5": {
+      "bar": 0,
+      "description": "The wearer can enter a rage (as the rage spell) as a standard action once per day. \n\nWhenever the wearer takes an amount of damage equal to at least half his current hit points in a single round, there is a 50% chance that the belt activates its rage ability automatically as an immediate action, provided the power has not already been activated that day and the wearer is not already raging. \n\nRegardless of how the rage is activated, it lasts for 5 rounds.\n\nVictor's Belt\n\nCrafted add-on: Heavyload Belt",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Morale",
+          "id": 0,
+          "targetDraggable": 70
+        },
+        "1": {
+          "effectMod": 2,
+          "effectType": "Morale",
+          "id": 1,
+          "targetDraggable": 69
+        }
+      },
+      "icon": "https://i.pinimg.com/originals/89/11/06/891106246617b3ae51ef86a976955911.jpg",
+      "id": 5,
+      "name": "Victor's Belt",
+      "slotNum": 5,
+      "status": "checked"
+    },
+    "6": {
+      "bar": 0,
+      "description": "",
+      "effects": {
+        "0": {
+          "effectMod": 7,
+          "effectType": "Armor",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 7,
+          "effectType": "Armor",
+          "id": 1,
+          "targetDraggable": 8
+        }
+      },
+      "icon": "http://4.bp.blogspot.com/-lUx4PHHD0JA/VEknuf2oX6I/AAAAAAAAASg/j7KrsUq6ggQ/s1600/c7c4cfa221b57cc4b3cff32ee2315d18.jpg",
+      "id": 6,
+      "name": "+1 Burdenless Mithral Mountain Pattern Plate ",
+      "slotNum": 6,
+      "status": "checked"
+    },
+    "7": {
+      "bar": 1,
+      "description": "Once per day when the wearer successfully pins a foe with a grapple check, the vines can move off the wearer (ending the circumstance bonus on combat maneuver checks), envelop the target, and tie it up. A tied-up victim can escape the vines by succeeding at a combat maneuver or Escape Artist check with a DC equal to the result of the combat maneuver check that pinned the victim. \n\nThe character who was wearing the gauntlets when they were used to envelop a target can remove them from the target as a move action. \n\nAny other creature must succeed at a combat maneuver or Strength check at the same DC to pry the gauntlets loose of an enveloped target.\n\n Gauntlets of Twisting Vines",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Circumstance",
+          "id": 0,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "http://i.4pcdn.org/tg/1481504609968.png",
+      "id": 7,
+      "name": "Gloves of Twisting Vines",
+      "slotNum": 0,
+      "status": "checked"
+    },
+    "8": {
+      "bar": 1,
+      "description": "Functions as a ring of Deflection +3, weakens Warden to attempts to dominate him (forced disadvantadge against the crystal)",
+      "effects": {
+        "0": {
+          "effectMod": 3,
+          "effectType": "Deflection",
+          "id": 0,
+          "targetDraggable": 4
+        },
+        "1": {
+          "effectMod": 3,
+          "effectType": "Deflection",
+          "id": 1,
+          "targetDraggable": 70
+        },
+        "2": {
+          "effectMod": 3,
+          "effectType": "Deflection",
+          "id": 2,
+          "targetDraggable": 8
+        },
+        "3": {
+          "effectMod": 3,
+          "effectType": "Deflection",
+          "id": 3,
+          "targetDraggable": 7
+        }
+      },
+      "icon": "https://media-waterdeep.cursecdn.com/avatars/44/215/636421069872005821.png",
+      "id": 8,
+      "name": "Temptress Ring +3",
+      "slotNum": 1,
+      "status": "checked"
+    },
+    "9": {
+      "bar": 1,
+      "description": " Thorny Ioun Stone",
+      "effects": {
+        "0": {
+          "effectMod": 2,
+          "effectType": "Competence",
+          "id": 0,
+          "targetDraggable": 103
+        }
+      },
+      "icon": "https://i.stack.imgur.com/ylUic.png",
+      "id": 9,
+      "name": "Violet Thorny Ioun Stone",
+      "slotNum": 2,
+      "status": "checked"
+    }
+  }
+}

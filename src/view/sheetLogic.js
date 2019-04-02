@@ -5,6 +5,20 @@ sheetProj.view.sheetLogic = {
       setClicks();
       displayBible();
       updateFinalMods();
+      toggleBar.loadBar();
+      charaSwap.loadTitle();
+
+      window.addEventListener('unload', function(event) {
+        let skipNextSave=JSON.parse(localStorage.getItem("skipNextSave"));
+        if (skipNextSave){
+          localStorage.setItem("skipNextSave", JSON.stringify(false));
+        }
+        else{
+          saveActivePage();
+        }
+
+      });
+
 
       if (!JSON.parse(localStorage.getItem("tutorialSkip"))){
         runTutorial();
@@ -12,6 +26,826 @@ sheetProj.view.sheetLogic = {
 
     }
 };
+
+let toggleBar={
+  toggleBody:function(){
+    $("#toggleBarBody").toggleClass("noHeight");
+  },
+  drag:function(ev) {
+    ev.dataTransfer.setData("text", ev.target.parentNode.id);
+  },
+  allowDrop:function(ev) {
+    ev.preventDefault();
+  },
+  drop:function(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (ev.target.childElementCount==0 && ev.target.classList.contains("toggleSlot")){
+      ev.target.appendChild(document.getElementById(data));
+      toggleBar.saveBarPosition();
+    }
+  },
+  //------------
+  loadBar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let incomingToggles=[];
+
+    $(".toggleSlot").empty();
+    $("#ToggleTitle").val(chara.toggleBarTitles[chara.activeToggleBar]);
+
+    for (let key in sheet.toggles){
+      if (sheet.toggles[key].bar==chara.activeToggleBar){
+        incomingToggles.push(sheet.toggles[key]);
+      }
+    }
+
+
+    for (let i=0; i<7 && i<incomingToggles.length; i++){
+      let toggleSelected="";
+
+
+      let currentToggle=incomingToggles[i];
+
+      if (currentToggle.status){
+        toggleSelected="toggleSelected";
+      }
+      let newToggle=`<label class="toggle ${toggleSelected}" id="toggle${currentToggle.id}" style="width:100%; height:100%; position:relative;">
+          <img class="toggleImg" src="${currentToggle.icon}" alt="some img" draggable="true" ondragstart="toggleBar.drag(event)">
+          <img class="toggleSettings" src="https://res.cloudinary.com/metaverse/image/upload/v1547929282/icons8-settings-24.png" alt="settings" onClick="toggleBar.fetchSettings(event)">
+          <div class="toggleNameTag">${currentToggle.name}</div>
+          <input id="toggleCheck${currentToggle.id}" onchange="toggleBar.toggle(event)" style="height:15%; width:100%; visibility:hidden; position:absolute;" type="checkbox" ${currentToggle.status}>
+      </label>`;
+
+      $(`#toggleSlot${currentToggle.slotNum}`).html(newToggle);
+    }
+
+    if (chara.activeToggleBar+1 >= chara.totalToggleBars){
+      $("#toggleBarNextBtn").prop( "disabled", true );
+      $("#toggleShuffleRightBtn").prop( "disabled", true );
+    }
+    else{
+      $("#toggleBarNextBtn").prop( "disabled", false );
+      $("#toggleShuffleRightBtn").prop( "disabled", false );
+    }
+
+    if(chara.activeToggleBar<=0){
+      $("#toggleBarPrevBtn").prop( "disabled", true );
+      $("#toggleShuffleLeftBtn").prop( "disabled", true );
+    }
+    else{
+      $("#toggleBarPrevBtn").prop( "disabled", false );
+      $("#toggleShuffleLeftBtn").prop( "disabled", false );
+
+    }
+
+  },
+  titleChange:function(newTitle){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+
+    chara.toggleBarTitles.splice(chara.activeToggleBar,1, newTitle);
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+
+  },
+  saveBarPosition:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let toggleList=sheet.toggles;
+
+    let barToggles=$(".toggle");
+
+    for (let key=0; key<barToggles.length; key++){
+
+
+
+      let currToggle= findByID(toggleList, parseInt(barToggles[key].id.replace('toggle','')));
+
+      currToggle.slotNum=parseInt($(barToggles[key]).closest(".toggleSlot")[0].id.replace("toggleSlot", ""));
+
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+  },
+  nextBar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+
+    if(chara.activeToggleBar+1<chara.totalToggleBars){
+      chara.activeToggleBar++;
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+  },
+  prevBar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+
+    if(chara.activeToggleBar>0){
+      chara.activeToggleBar--;
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+
+  },
+  shuffleBarLeft:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let oldBarNum=chara.activeToggleBar;
+    let newBarNum=chara.activeToggleBar-1;
+    let sheetKeys=Object.keys(sheet.toggles);
+
+    if(chara.activeToggleBar>0){
+      chara.activeToggleBar--;
+      sheetKeys.forEach(function(key){
+        if (sheet.toggles[key].bar==newBarNum){
+          sheet.toggles[key].bar=oldBarNum;
+        }
+        else if(sheet.toggles[key].bar==oldBarNum){
+          sheet.toggles[key].bar=newBarNum;
+        }
+      });
+      chara.toggleBarTitles=ci.arraySwap(chara.toggleBarTitles, oldBarNum, newBarNum);
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+  },
+  shuffleBarRight:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let oldBarNum=chara.activeToggleBar;
+    let newBarNum=chara.activeToggleBar+1;
+    let sheetKeys=Object.keys(sheet.toggles);
+
+    if(chara.activeToggleBar+1<chara.totalToggleBars){
+      chara.activeToggleBar++;
+      sheetKeys.forEach(function(key){
+        if (sheet.toggles[key].bar==newBarNum){
+          sheet.toggles[key].bar=oldBarNum;
+        }
+        else if(sheet.toggles[key].bar==oldBarNum){
+          sheet.toggles[key].bar=newBarNum;
+        }
+      });
+      chara.toggleBarTitles=ci.arraySwap(chara.toggleBarTitles, oldBarNum, newBarNum);
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+  },
+  addBar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    chara.totalToggleBars++;
+    chara.toggleBarTitles.push("New ToggleBar");
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+
+  },
+  deleteBar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    if (chara.totalToggleBars==1){
+      alert("You can't delete your only ToggleBar!");
+      return
+    }
+
+    for (let key in sheet.toggles){
+      let tog=sheet.toggles[key];
+      if (tog.bar==chara.activeToggleBar){
+        localStorage.setItem("savedChars", JSON.stringify(savedChars));
+        toggleBar.deleteToggle(tog.id);
+        savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      }
+      else if(tog.bar>chara.activeToggleBar){
+        tog.bar--;
+      }
+    }
+    chara.toggleBarTitles.splice(chara.activeToggleBar,1);
+
+    if(chara.activeToggleBar+1==chara.totalToggleBars){
+      chara.activeToggleBar--;
+    }
+    chara.totalToggleBars--;
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+  },
+  //------------
+  toggle:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let toggleList=sheet.toggles;
+
+
+    let togContainer=$(event.target).closest(".toggle")[0];
+
+
+    let currToggle= findByID(toggleList, parseInt(event.target.id.replace('toggleCheck','')));
+    if (event.target.checked){
+      currToggle.status="checked";
+      localStorage.setItem("savedChars",JSON.stringify(savedChars));
+      toggleBar.applyEffects(currToggle.id,Object.values(currToggle.effects));
+
+
+    }
+    else{
+      currToggle.status="";
+      localStorage.setItem("savedChars",JSON.stringify(savedChars));
+      toggleBar.removeEffects(currToggle.id,Object.values(currToggle.effects));
+
+    }
+    $(togContainer).toggleClass("toggleSelected");
+    updateFinalMods();
+
+
+  },
+  applyEffects:function(toggleID, effectList){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    for (var i=0; i<effectList.length; i++){
+      let effect=effectList[i];
+      let drag=sheet.draggables[effect.targetDraggable];
+
+      if (!drag){
+        continue;
+      }
+      let dragEffects=drag.toggleEffects;
+      if (!dragEffects.hasOwnProperty(toggleID)){
+        dragEffects[toggleID]=[];
+      }
+      dragEffects[toggleID].push([effect.effectMod, effect.effectType]);
+    }
+
+    localStorage.setItem("savedChars",JSON.stringify(savedChars));
+  },
+  removeEffects:function(toggleID, effectList){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    for (var i=0; i<effectList.length; i++){
+      let effect=effectList[i];
+      let drag=sheet.draggables[effect.targetDraggable];
+      if (!drag){
+        continue;
+      }
+      let dragEffects=drag.toggleEffects;
+      delete dragEffects[toggleID];
+    }
+    localStorage.setItem("savedChars",JSON.stringify(savedChars));
+  },
+  fetchSettings:function(event){
+    event.preventDefault();
+    let toggleID=$(event.target).closest(".toggle")[0].id.replace('toggle','');
+
+    toggleBar.loadSettings(toggleID);
+
+
+  },
+  loadSettings:function(toggleID){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let toggleList=sheet.toggles;
+
+
+
+    let toggle= findByID(toggleList, parseInt(toggleID));
+    let toggleEffects="";
+
+
+    let draggables=Object.entries(sheet.draggables);
+    let bonusTypes=Object.entries(JSON.parse(localStorage.getItem("bonusTypes")));
+    let toggleKeys=Object.keys(toggle.effects);
+
+    for (let i=0; i<toggleKeys.length; i++){
+      let effect=toggle.effects[toggleKeys[i]];
+      let validTargets="";
+      let unsortedTargets=[];
+      let targetGroups={};
+      let genEffects="";
+      let armorEffects="";
+      let ablEffects="";
+
+      let selected="";
+
+      for (let i=0; i<draggables.length; i++){
+        if (draggables[i][1].finalMod!==null && draggables[i][1].uiName!="Unnamed"){
+          if(effect.targetDraggable==draggables[i][1].id){
+            selected="selected";
+          }
+          unsortedTargets.push([draggables[i][1].uiName,`<option ${selected} value="${draggables[i][1].id}">${draggables[i][1].uiName}</option>`, draggables[i][1].toggleLabel]);
+
+          selected="";
+        }
+      }
+      unsortedTargets.sort(function (a, b) {
+             if (a[0] < b[0]) return -1;
+             if (a[0] > b[0]) return 1;
+             return 0;
+           });
+
+
+      for (let i=0; i<unsortedTargets.length; i++){
+
+        if (targetGroups.hasOwnProperty(unsortedTargets[i][2])){
+          targetGroups[unsortedTargets[i][2]]+=unsortedTargets[i][1]
+        }
+        else{
+          targetGroups[unsortedTargets[i][2]]=unsortedTargets[i][1];
+        }
+
+      }
+      targetGroups=Object.entries(targetGroups);
+
+      for (let i=0; i<targetGroups.length; i++){
+        validTargets+=`<optgroup label="${targetGroups[i][0]}">`;
+        validTargets+=targetGroups[i][1];
+        validTargets+='</outgroup>';
+      }
+
+
+      for (let i=0; i<bonusTypes.length; i++){
+        if (bonusTypes[i][0]==effect.effectType){
+          selected="selected";
+        }
+        switch (bonusTypes[i][1].category){
+          case "General Purpose":
+            genEffects+=`<option ${selected} value="${bonusTypes[i][0]}">${bonusTypes[i][0]}</option>`;
+            break;
+
+          case "Armor Class Specific":
+            armorEffects+=`<option ${selected} value="${bonusTypes[i][0]}">${bonusTypes[i][0]}</option>`;
+            break;
+
+          case "Ability Score Specific":
+            ablEffects+=`<option ${selected} value="${bonusTypes[i][0]}">${bonusTypes[i][0]}</option>`;
+            break;
+
+          default:
+            genEffects+=`<option ${selected} value="${bonusTypes[i][0]}">${bonusTypes[i][0]}</option>`;
+            console.log("error:  bonus type "+ bonusTypes[i][0]+ " did not fit into any category.  Setting to General Purpose.");
+            break;
+        }
+
+        selected="";
+      }
+
+        toggleEffects+=`
+        <div id="effectContainer${effect.id}" class="effectContainer" style="position:relative">
+          <img class="effectDeleter" src="https://res.cloudinary.com/metaverse/image/upload/v1548289539/icons8-delete-48.png" alt="deleteEffect" onclick="toggleBar.deleteEffect(event)">
+          <table id="effect${effect.id}" class="toggleEffectTable mt-2">
+
+            <tr style="width:100%;">
+              <td style="width:40%;">Draggable Modified:</td>
+              <td style="width:60%;"><select id="target${effect.id}" onchange="toggleBar.changeTarget(event)" style="width:80%;">
+                <option value="" selected disabled hidden style="font-size:.5em">Select Target</option>
+                <optgroup label="Named Draggables">
+                </outgroup>
+                <optgroup label="--------">
+                </outgroup>
+                ${validTargets}
+
+              </select></td>
+            </tr>
+            <tr style="width:100%;">
+              <td style="width:40%;">Modifier:</td>
+              <td style="width:60%;"><input id="modifier${effect.id}" onchange="toggleBar.changeMod(event)" type="number" value="${effect.effectMod}" style="width:80%;"></td>
+            </tr>
+            <tr style="width:100%;">
+              <td style="width:40%;">Modifier Type:</td>
+              <td style="width:60%;"><select id="effectType${effect.id}" onchange="toggleBar.changeType(event)" style="width:80%">
+              <optgroup label="General Bonus Types">
+                ${genEffects}
+              </outgroup>
+              <optgroup label="Armor Specific Bonuses">
+                ${armorEffects}
+              </outgroup>
+              <optgroup label="Abl Score Specific Bonuses">
+                ${ablEffects}
+              </outgroup>
+              </select></td>
+            </tr>
+          </table>
+        </div>`;
+    }
+
+    let newInfo=`<input class="invisible" id="selectedToggle" value="${toggleID}">
+    <label for="toggleName" style="font-size:1.5em; font-weight:bold;">Toggle Name:</label>
+    <input id="toggleName" onchange="toggleBar.changeName(event.target.value)" value="${toggle.name}">
+    <label for="toggleIcon" class=" mt-2" style="font-size:1.5em; font-weight:bold;">Toggle Icon:</label>
+    <div class="container-fluid">
+      <div class="row">
+        <img class="col-2" src=${toggle.icon}>
+        <input class="col-6" id="toggleIcon" onchange="toggleBar.changeIcon(event.target.value)" value="${toggle.icon}">
+      </div>
+    </div>
+    <label for="toggleDescription" style="font-weight:bold;" class="mt-2">Toggle Description:</label>
+    <div id="descriptionHolder">
+      ${toggle.description}
+    </div>
+
+    <p class="mt-2"><b>Effect List:<br></b></p>
+    <div id="toggleEffects" class="mt-2">
+    ${toggleEffects}
+    </div>
+    <button onclick="toggleBar.newEffect()" style="background-color:cyan" class="mt-4">Add a new Effect</button>
+    <button onclick="toggleBar.deleteToggle()" style="background-color:red">Delete</button>`;
+
+    $("#draggableInfo").html(newInfo);
+    $("#descriptionHolder").click(toggleBar.toggleDescription);
+  },
+  changeName:function(newName){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+
+
+
+    sheet.toggles[selectedToggle].name=newName;
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+  },
+  changeDescription:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let newDescription=$(event.target).val();
+
+
+    sheet.toggles[selectedToggle].description=newDescription;
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    $("#descriptionHolder").html(newDescription);
+  },
+  toggleDescription:function(){
+
+
+    if ($("#toggleDescription").length!=0){
+      return;
+    }
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let toggle=sheet.toggles[selectedToggle];
+
+
+    $("#descriptionHolder").html(`<textarea id="toggleDescription" onchange="toggleBar.changeDescription(event)">${toggle.description}</textarea>`);
+
+  },
+  changeTarget:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let selectedEffect=parseInt(event.target.id.replace('target',''));
+    let newValue=parseInt(event.target.value);
+
+    if(sheet.toggles[selectedToggle].status=="checked"){
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.removeEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+
+      sheet.toggles[selectedToggle].effects[selectedEffect].targetDraggable=newValue;
+
+
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.applyEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+    }
+    else{
+      sheet.toggles[selectedToggle].effects[selectedEffect].targetDraggable=newValue;
+    }
+
+
+
+
+
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    updateFinalMods();
+  },
+  changeMod:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let selectedEffect=parseInt(event.target.id.replace('modifier',''));
+    let newValue=parseInt(event.target.value);
+
+    if(sheet.toggles[selectedToggle].status=="checked"){
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.removeEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+
+      sheet.toggles[selectedToggle].effects[selectedEffect].effectMod=newValue;
+
+
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.applyEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+    }
+    else{
+      sheet.toggles[selectedToggle].effects[selectedEffect].effectMod=newValue;
+    }
+
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    updateFinalMods();
+  },
+  changeType:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let selectedEffect=parseInt(event.target.id.replace('effectType',''));
+    let newValue=event.target.value;
+
+    if(sheet.toggles[selectedToggle].status=="checked"){
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.removeEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+
+      sheet.toggles[selectedToggle].effects[selectedEffect].effectType=newValue;
+
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.applyEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+    }
+    else{
+      sheet.toggles[selectedToggle].effects[selectedEffect].effectType=newValue;
+    }
+
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    updateFinalMods();
+  },
+  changeIcon:function(newIcon){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+
+    sheet.toggles[selectedToggle].icon=newIcon;
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadBar();
+    toggleBar.loadSettings(selectedtoggle);
+  },
+  newEffect:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedToggle= $("#selectedToggle")[0].value;
+    let effectID=newID(sheet.toggles[selectedToggle].effects);
+
+    // if(sheet.toggles[selectedToggle].status=="checked"){
+    //   savedChars=toggleBar.resetToggle(selectedToggle);
+    //   chara=savedChars[activeChar];
+    //   sheet=chara.charSheets[chara.activeSheet];
+    // }
+
+    sheet.toggles[selectedToggle].effects[effectID]={
+      targetDraggable:null,
+      effectType:"Untyped",
+      effectMod:0,
+      id:effectID
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadSettings(selectedToggle);
+  },
+  deleteEffect:function(event){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let selectedToggle= $("#selectedToggle")[0].value;
+
+    let effectID=parseInt($(event.target).closest(".effectContainer")[0].id.replace("effectContainer",""));
+
+    if(sheet.toggles[selectedToggle].status=="checked"){
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.removeEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+
+        delete sheet.toggles[selectedToggle].effects[effectID];
+
+      localStorage.setItem("savedChars", JSON.stringify(savedChars));
+      toggleBar.applyEffects(selectedToggle,Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+    }
+    else{
+      delete sheet.toggles[selectedToggle].effects[effectID];
+    }
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    toggleBar.loadSettings(selectedToggle);
+    updateFinalMods();
+
+  },
+  deleteToggle:function(toggleID){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let selectedToggle;
+
+    if(isNaN(toggleID)){
+      selectedToggle= $("#selectedToggle")[0].value;
+    }
+    else{
+      selectedToggle= toggleID;
+    }
+
+
+    if(sheet.toggles[selectedToggle].status=="checked"){
+      toggleBar.removeEffects(selectedToggle, Object.values(sheet.toggles[selectedToggle].effects));
+      savedChars=JSON.parse(localStorage.getItem("savedChars"));
+      chara=savedChars[activeChar];
+      sheet=chara.charSheets[chara.activeSheet];
+    }
+
+    delete sheet.toggles[selectedToggle];
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    $("#draggableInfo").html("");
+    toggleBar.loadBar();
+    updateFinalMods();
+  },
+  newToggle:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let toggleID=newID(sheet.toggles);
+
+    let availableSlot=null;
+
+    let barToggles=$(".toggleSlot");
+
+    for (let key=0; key<barToggles.length; key++){
+      if(barToggles[key].childElementCount==0){
+        availableSlot=key;
+        break;
+      }
+    }
+    if (availableSlot ===null){
+      alert("Current toggle bar is full!  Change toggle bars or clear out space before creating a new toggle!");
+    }
+    else{
+      sheet.toggles[toggleID]={
+          id: toggleID,
+          name: "Unnamed Toggle",
+          bar: chara.activeToggleBar,
+          slotNum: availableSlot,
+          effects: {
+            0:{
+              targetDraggable:null,
+              effectType:"Untyped",
+              effectMod:0,
+              id:0
+              }
+          },
+          icon: "https://res.cloudinary.com/metaverse/image/upload/v1548787121/icons8-transition-both-directions-48.png",
+          status: "",
+          description:""
+      }
+      localStorage.setItem("savedChars",JSON.stringify(savedChars));
+      toggleBar.loadBar();
+    }
+
+  },
+  resetToggle:function(toggleID){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let toggle=sheet.toggles[toggleID];
+
+
+    toggleBar.removeEffects(toggle.id,Object.values(toggle.effects));
+    savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    toggleBar.applyEffects(toggle.id,Object.values(toggle.effects));
+    savedChars=JSON.parse(localStorage.getItem("savedChars"));
+
+
+
+    return savedChars;
+  }
+
+
+}
+
+let dragLogic={
+
+  changeCategory:function(newCategory){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedDrag= $("#selectedDraggable")[0].value;
+
+
+
+    sheet.draggables[selectedDrag].toggleLabel=newCategory;
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+  },
+  toggleDescription:function(){
+    if ($("#draggableDescription").length!=0){
+      return;
+    }
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let selectedDrag= $("#selectedDraggable")[0].value;
+    let draggable=sheet.draggables[selectedDrag];
+
+
+    $("#descriptionHolder").html(`<textarea id="draggableDescription" onchange="dragLogic.changeDescription(event)">${draggable.description}</textarea>`);
+
+  },
+
+  changeDescription:function(event){
+
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+
+    let draggableID=$("#selectedDraggable")[0].value;
+
+    let draggable=findByID(sheet.draggables, draggableID);
+    draggable.description=$(event.target).val();
+
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    $("#descriptionHolder").html(draggable.description);
+  }
+}
+
+//-----------------
 
 let pageNavi={
   nextPage:function(){
@@ -22,14 +856,15 @@ let pageNavi={
     let sheet=chara.charSheets[chara.activeSheet];
     if (chara.activePage+1<chara.totalPages){
       chara.activePage++;
-      if (!chara.activePage+1<chara.totalPages){
-        $("forwardPageButton").prop( "disabled", true );
-      }
+      // $("#reversePageButton").prop( "disabled", false );
+      // if (!(chara.activePage+1<chara.totalPages)){
+      //   $("#forwardPageButton").prop( "disabled", true );
+      // }
     }
-    console.log(`Welcome to page ${chara.activePage}`);
     localStorage.setItem("savedChars", JSON.stringify(savedChars));
     loadSheet();
     restoreHighlights(sheet.draggables);
+    updateAbilityMods();
 
   },
   prevPage:function(){
@@ -40,32 +875,41 @@ let pageNavi={
     let sheet=chara.charSheets[chara.activeSheet];
     if (chara.activePage>0){
       chara.activePage--;
-      if (chara.activePage<=0){
-        $("reversePageButton").prop( "disabled", true );
-      }
+      // $("#forwardPageButton").prop( "disabled", false );
+      // if (chara.activePage<=0){
+      //   $("#reversePageButton").prop( "disabled", true );
+      // }
     }
-    console.log(`Welcome to page ${chara.activePage}`);
     localStorage.setItem("savedChars", JSON.stringify(savedChars));
     loadSheet();
     restoreHighlights(sheet.draggables);
+    updateAbilityMods();
   },
   spawnPage:function(){
     let savedChars=JSON.parse(localStorage.getItem("savedChars"));
     let activeChar=JSON.parse(localStorage.getItem("activeChar"));
     let chara=savedChars[activeChar];
     chara.totalPages++;
-    console.log(`Welcome our new page ${chara.totalPages}`);
     localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    $("#forwardPageButton").prop( "disabled", false );
   },
   destroyPage:function(){
     let savedChars=JSON.parse(localStorage.getItem("savedChars"));
     let activeChar=JSON.parse(localStorage.getItem("activeChar"));
     let chara=savedChars[activeChar];
     let sheet=chara.charSheets[chara.activeSheet];
+    if (chara.totalPages==1){
+      alert("You can't delete your last page!");
+      return
+    }
+
     for (let key in sheet.draggables){
       let elem=sheet.draggables[key];
       if (elem.page==chara.activePage){
         delete sheet.draggables[key];
+      }
+      else if(elem.page>chara.activePage){
+        elem.page--;
       }
     }
     chara.totalPages--;
@@ -73,6 +917,177 @@ let pageNavi={
     localStorage.setItem("savedChars", JSON.stringify(savedChars));
     loadSheet();
     restoreHighlights(sheet.draggables);
+  },
+  shufflePageLeft:function(){
+    saveActivePage();
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let oldPageNum=chara.activePage;
+    let newPageNum=chara.activePage-1;
+    let sheetKeys=Object.keys(sheet.draggables);
+
+    if (chara.activePage>0){
+      chara.activePage--;
+      sheetKeys.forEach(function(key){
+        if (sheet.draggables[key].page==newPageNum){
+          sheet.draggables[key].page=oldPageNum;
+        }
+        else if(sheet.draggables[key].page==oldPageNum){
+          sheet.draggables[key].page=newPageNum;
+        }
+      });
+      // $("#forwardPageButton").prop( "disabled", false );
+      // if (chara.activePage<=0){
+      //   $("#reversePageButton").prop( "disabled", true );
+      // }
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    loadSheet();
+    restoreHighlights(sheet.draggables);
+  },
+  shufflePageRight:function(){
+    saveActivePage();
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let sheet=chara.charSheets[chara.activeSheet];
+    let oldPageNum=chara.activePage;
+    let newPageNum=chara.activePage+1;
+    let sheetKeys=Object.keys(sheet.draggables);
+
+    console.log(chara.activePage+1);
+    console.log(chara.totalPages);
+    if (chara.activePage+1<chara.totalPages){
+      console.log("triggered");
+      chara.activePage++;
+      sheetKeys.forEach(function(key){
+        if (sheet.draggables[key].page==newPageNum){
+          sheet.draggables[key].page=oldPageNum;
+        }
+        else if(sheet.draggables[key].page==oldPageNum){
+          sheet.draggables[key].page=newPageNum;
+        }
+      });
+      // $("#reversePageButton").prop( "disabled", false );
+      // if (chara.activePage+1>=chara.totalPages){
+      //   $("#forwardPageButton").prop( "disabled", true );
+      // }
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    loadSheet();
+    restoreHighlights(sheet.draggables);
+  }
+}
+
+let charaSwap={
+  changeTitle:function(newTitle){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+
+    chara.charName=newTitle;
+
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    charaSwap.loadTitle();
+  },
+  loadTitle:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+    let options='';
+
+    for(let i=0; i<savedChars.length; i++){
+      if (i==activeChar){
+        options+=`<option selected value="${i}">${savedChars[i].charName}</option>`;
+      }
+      else{
+        options+=`<option value="${i}">${savedChars[i].charName}</option>`;
+      }
+
+    }
+    options+=`<option value="new">NEW CHARACTER</option>`;
+    options+=`<option value="delete">DELETE CHARACTER</option>`;
+
+    $("#charTitleBanner").val(chara.charName);
+    $("#charChoiceMenu").empty();
+    $("#charChoiceMenu").html(options);
+  },
+  changeChar:function(newChar){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let chara=savedChars[activeChar];
+
+    if (newChar=="new"){
+      charaSwap.newChar();
+      return;
+    }
+    else if (newChar=="delete"){
+      charaSwap.deleteChar();
+      return;
+    }
+    saveActivePage();
+    localStorage.setItem("skipNextSave", JSON.stringify(true));
+    activeChar=parseInt(newChar);
+    localStorage.setItem("activeChar", JSON.stringify(activeChar));
+
+    location.reload();
+  },
+  newChar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let defaultCharSheet=JSON.parse(localStorage.getItem("defaultCharSheet"));
+    let chara=savedChars[activeChar];
+
+    let newChar={
+      "charName":"New Char",
+      "charSheets":[defaultCharSheet],
+      "activeSheet":0,
+      "activePage":0,
+      "totalPages":7,
+      "activeToggleBar":0,
+      "toggleBarTitles":["New ToggleBar"],
+      "totalToggleBars":1
+    }
+
+    savedChars.push(newChar);
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    localStorage.setItem("activeChar", JSON.stringify(savedChars.length-1));
+
+    location.reload();
+  },
+  deleteChar:function(){
+    let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+    let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+    let defaultCharSheet=JSON.parse(localStorage.getItem("defaultCharSheet"));
+    let chara=savedChars[activeChar];
+
+    if (savedChars.length<=1){
+      alert("You can't delete your only character!");
+      return;
+    }
+
+    savedChars.splice(activeChar,1);
+    if (activeChar>0){
+      activeChar--;;
+    }
+    localStorage.setItem("savedChars", JSON.stringify(savedChars));
+    localStorage.setItem("activeChar", JSON.stringify(activeChar));
+
+    location.reload();
+
+  }
+}
+
+let ci={
+  arraySwap:function(array, index1, index2){
+    //swaps two values in an arrays order by index then returns the modified array
+    let tmp=array[index1];
+    array[index1]=array[index2];
+    array[index2]=tmp;
+    return array;
+
   }
 }
 
@@ -81,8 +1096,16 @@ function setClicks(){
   $(".tabHead").click(collapseTabBody);
   $("#reversePageButton").click(pageNavi.prevPage);
   $("#forwardPageButton").click(pageNavi.nextPage);
+  $("#shuffleLeftPageButton").click(pageNavi.shufflePageLeft);
+  $("#shuffleRightPageButton").click(pageNavi.shufflePageRight);
   $("#spawnPage").click(pageNavi.spawnPage);
   $("#deletePage").click(pageNavi.destroyPage);
+
+  $("#toggleBarHeader").click(toggleBar.toggleBody);
+  $("#toggleShuffleRightBtn").click(toggleBar.shuffleBarRight);
+  $("#toggleShuffleLeftBtn").click(toggleBar.shuffleBarLeft);
+
+
 }
 
 function collapseTabBody(event){
@@ -100,9 +1123,31 @@ function loadSheet(){
 
   let styleBible=JSON.parse(localStorage.getItem("styleBible"));
   $(".draggable").remove();
+
+
+
+  if (chara.activePage+1>=chara.totalPages){
+    $("#forwardPageButton").prop( "disabled", true );
+    $("#shuffleRightPageButton").prop( "disabled", true );
+  }
+  else{
+      $("#forwardPageButton").prop( "disabled", false );
+      $("#shuffleRightPageButton").prop( "disabled", false );
+  }
+  if (chara.activePage<=0){
+    $("#reversePageButton").prop( "disabled", true );
+    $("#shuffleLeftPageButton").prop( "disabled", true );
+  }
+  else{
+    $("#reversePageButton").prop( "disabled", false );
+    $("#shuffleLeftPageButton").prop( "disabled", false );
+
+  }
+
   for (var key in sheet.draggables){
 
     let elem=sheet.draggables[key];
+    // elem.toggleEffects={};
     if (elem.page != chara.activePage){
 
       continue;
@@ -125,13 +1170,17 @@ function loadSheet(){
     $("#temporary").find(".testInput").val(`${elem.value}`);
     $("#temporary").find(".baseInput").val(`${elem.value}`);
     $("#temporary").find(".finalMod").val(`${elem.finalMod}`);
-
+    $("#temporary").find(".artBox").attr(`src`, `${elem.backgroundArt}`);
+    if($("#temporary").hasClass("artBox")){
+      $("#temporary").attr(`src`, `${elem.backgroundArt}`);
+    };
 
     $("#temporary").prop('id', `${elem.id}`);
     spawnBox($("#htmlPalette").children());
     $("#htmlPalette").empty();
-  }
 
+  }
+  // localStorage.setItem("savedChars", JSON.stringify(savedChars));
 
 }
 
@@ -154,7 +1203,7 @@ function saveActivePage(){
     currDrag.left=currDiv.style.left;
   }
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
-  console.log(sheet.draggables);
+
 }
 
 function collapseParent(e){
@@ -187,19 +1236,23 @@ function newBox(event){
   let newDraggable={
         "id":`${newID(sheet.draggables)}`,
         "page":chara.activePage,
+        "toggleEffects": {},
         "name":"Title",
         "uiName":"Unnamed",
-        "value":"",
+        "value":0,
         "finalAblScore":0,
         "finalMod":0,
         "drawsFrom":[],
+        "toggleLabel":"Uncategorized",
         "activeRules":[],
+        "backgroundArt":"",
         "height":"100px",
         "width":"100px",
         "top":"50%",
         "left":"50%",
         "locked":false,
         "bibleRef":`${stripToID(event.currentTarget.id)}`
+
       };
 
   sheet.draggables[newDraggable.id]=JSON.parse(JSON.stringify(newDraggable));
@@ -225,13 +1278,14 @@ function newID(objList){
   let ids=[];
   let newID=0;
 
+
   for (var key in objList){
     ids.push(parseInt(objList[key].id));
   }
   ids.sort((a, b) => (a - b));
 
   for (let i=0;i<ids.length;i++){
-    if (!i==ids[i]){
+    if (i!=ids[i]){
       newID=i;
       break;
     }
@@ -297,7 +1351,7 @@ function changeTitle(event){
   let activeChar=JSON.parse(localStorage.getItem("activeChar"));
   let chara=savedChars[activeChar];
   let sheet=chara.charSheets[chara.activeSheet];
-  let draggable=findByID(sheet.draggables, event.parentElement.id);
+  let draggable=findByID(sheet.draggables, $(event).closest(".draggable")[0].id);
   draggable.name=event.value;
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
 }
@@ -308,13 +1362,24 @@ function changeValue(event){
   let chara=savedChars[activeChar];
   let sheet=chara.charSheets[chara.activeSheet];
 
-  let draggable=findByID(sheet.draggables, event.parentElement.id);
+  let draggable=findByID(sheet.draggables, $(event).closest(".draggable")[0].id);
 
   draggable.value=event.value;
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
 
   updateFinalMods();
 }
+
+function directChangeDragSize(newSize, axis){
+  let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+  let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+  let chara=savedChars[activeChar];
+  let sheet=chara.charSheets[chara.activeSheet];
+
+  let draggable=findByID(sheet.draggables, $("#selectedDraggable")[0].value);
+  $(`#${draggable.id}`).css(axis, `${newSize}px`);
+}
+
 
 function changeDrawRatio(event){
   let savedChars=JSON.parse(localStorage.getItem("savedChars"));
@@ -323,6 +1388,7 @@ function changeDrawRatio(event){
   let sheet=chara.charSheets[chara.activeSheet];
 
   let draggable=findByID(sheet.draggables, stripToID($(event).closest('table')[0].id));
+  console.log(event.value);
 
   draggable=setDrawRatio(draggable, stripToID(event.id), event.value);
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
@@ -374,8 +1440,7 @@ function changeUIName(event){
 
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
 }
-
-function changeDescription(event){
+function changeDraggableArt(event){
 
   let savedChars=JSON.parse(localStorage.getItem("savedChars"));
   let activeChar=JSON.parse(localStorage.getItem("activeChar"));
@@ -385,13 +1450,21 @@ function changeDescription(event){
   let draggableID=$("#selectedDraggable")[0].value;
 
   let draggable=findByID(sheet.draggables, draggableID);
-  draggable.description=event.target.value;
-
-
+  draggable.backgroundArt=event.target.value;
+  $(`#${draggableID}`).attr("src", `${event.target.value}`);
+  console.log($(`#${draggableID}`));
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
 }
 
+
+
 function displayInfo(event){
+  if ($(event.target).hasClass("artBox")){
+    displayArt(event);
+    return;
+  }
+
+
   let savedChars=JSON.parse(localStorage.getItem("savedChars"));
   let activeChar=JSON.parse(localStorage.getItem("activeChar"));
   let chara=savedChars[activeChar];
@@ -420,11 +1493,24 @@ function displayInfo(event){
   <input class="invisible" id="selectedDraggable" value="${dragID}">
   <label for="draggableUIName" style="font-size:1.5em; font-weight:bold;">Draggable Name:</label>
   <input id="draggableUIName" onchange="changeUIName(event)" value="${draggable.uiName}">
-  <p><b>Draggable Description:</b> ${draggable.description}</p>
-  <label for="draggableDescription" style="font-weight:italic;">Input new Description:</label>
-  <input id="draggableDescription" onchange="changeDescription(event)" value="${draggable.description}">
 
-  <div id="draggableDraws">
+
+  <label class="mt-4"><span style="display: inline-block; text-align: right; width:55px;">Width:</span><input onchange="directChangeDragSize(event.target.value, 'width')" type="number" value="${parseInt(draggable.width)}"></label>
+  <label><span style="display: inline-block; text-align: right; width:55px;">Height:</span><input onchange="directChangeDragSize(event.target.value, 'height')" type="number" value="${parseInt(draggable.height)}"></label>
+
+  <label class="mt-4"><span style="display: inline-block; text-align: right; width:55px;">X-Pos:</span><input onchange="directChangeDragSize(event.target.value, 'left')" type="number" value="${parseInt(draggable.left)}"></label>
+  <label><span style="display: inline-block; text-align: right; width:55px;">Y-Pos:</span><input onchange="directChangeDragSize(event.target.value, 'top')" type="number" value="${parseInt(draggable.top)}"></label>
+
+
+  <label for="draggableCategory" style="font-size:1.5em; font-weight:bold;">Category:</label>
+  <input id="draggableCategory" onchange="dragLogic.changeCategory(event.target.value)" value="${draggable.toggleLabel}">
+  <p><b>Draggable Description:</b></p>
+  <div id="descriptionHolder">
+    ${draggable.description}
+  </div>
+
+
+  <div id="draggableDraws" class="mt-4">
   </div>
   <div id="draggableRules" class="mt-2">
     ${displayedRules}
@@ -433,10 +1519,40 @@ function displayInfo(event){
 
 
   $("#draggableInfo").html(newInfo);
+  $("#descriptionHolder").click(dragLogic.toggleDescription);
 }
 
+
+
+function displayArt(event){
+
+  let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+  let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+  let chara=savedChars[activeChar];
+  let sheet=chara.charSheets[chara.activeSheet];
+
+
+  let dragID=event.currentTarget.id;
+  let draggable=findByID(sheet.draggables, dragID);
+  console.log(draggable);
+
+  let newInfo=`<input class="invisible" id="selectedDraggable" value="${draggable.id}">
+  <label for="draggableArtURL" style="font-size:1.5em; font-weight:bold;">Art URL:</label>
+  <input id="draggableArtURL" onchange="changeDraggableArt(event)" value="${draggable.backgroundArt}">
+  <p><b>Draggable Description:</b></p>
+  <div id="descriptionHolder">
+    ${draggable.description}
+  </div>
+  <button onclick="deleteDraggable()" style="background-color:red">Delete</button>`;
+
+  $("#draggableInfo").html(newInfo);
+  $("#descriptionHolder").click(dragLogic.toggleDescription);
+}
+
+
+
 function bubbleReceptiveDivs(){
-  let receptiveDivs=$(".finalMod").parent();
+  let receptiveDivs=$(".finalMod").closest(".draggable");
 
 
   $.each(receptiveDivs, function( key, div ) {
@@ -445,7 +1561,7 @@ function bubbleReceptiveDivs(){
 }
 
 function bubbleSenderDivs(receiverID){
-  let senderDivs=$(".baseInput").parent();
+  let senderDivs=$(".baseInput").closest(".draggable");
 
 
 
@@ -600,7 +1716,8 @@ function drawSelect(e){
       targetElem=e.target;
     }
     else{
-      targetElem=e.target.parentNode;
+      targetElem=$(e.target).closest(".draggable")[0];
+      //targetElem=e.target.parentNode;
     }
 
     if (targetElem.id==localStorage.getItem("targetSelected")){
@@ -626,7 +1743,7 @@ function drawSelect(e){
       targetElem=e.target;
     }
     else{
-      targetElem=e.target.parentNode;
+      targetElem=$(e.target).closest(".draggable")[0];
     }
 
 
@@ -648,7 +1765,7 @@ function drawSelect(e){
 
     for (let i=0; i<drawSources.length; i++){
       drawSlots+=`<tr>
-        <td>${draggables[drawSources[i][0]].uiName}</td><td><input id="drawSource${drawSources[i][0]}" type="number" onchange="changeDrawRatio(this)" value="${drawSources[i][1]}"></td>
+        <td>${draggables[drawSources[i][0]].uiName}</td><td><input id="drawSource${drawSources[i][0]}" type="number" step="any" onchange="changeDrawRatio(this)" value="${drawSources[i][1]}"></td>
       </tr>`;
     }
     let drawHTML=
@@ -711,7 +1828,6 @@ function removeDraw(draggable, id){
 
 function setDrawRatio(draggable,id, newRatio){
   let drawList=draggable.drawsFrom;
-
   for (let i=0; i<drawList.length; i++){
     if (id==drawList[i][0]){
       drawList[i][1]=newRatio;
@@ -749,6 +1865,27 @@ function updateFinalMods(){
   localStorage.setItem("savedChars", JSON.stringify(savedChars));
 }
 
+function updateAbilityMods(){
+  let savedChars=JSON.parse(localStorage.getItem("savedChars"));
+  let activeChar=JSON.parse(localStorage.getItem("activeChar"));
+  let chara=savedChars[activeChar];
+  let sheet=chara.charSheets[chara.activeSheet];
+  let draggables=sheet.draggables;
+
+  for (let key in draggables){
+    if ($(`#${draggables[key].id}`).hasClass("abilityScore")){
+      draggables[key].finalAblScore=getDrawnMod(draggables[key])+parseInt(draggables[key].value);
+      draggables[key].finalMod=Math.floor(draggables[key].finalAblScore/2)-5;
+    }
+    if($(`#${draggables[key].id}`).find(".finalMod")[0]){
+      $(`#${draggables[key].id}`).find(".finalMod")[0].value=draggables[key].finalMod;
+    }
+
+  }
+
+  localStorage.setItem("savedChars", JSON.stringify(savedChars));
+}
+
 function getDrawnMod(object, skipList){
 
   let savedChars=JSON.parse(localStorage.getItem("savedChars"));
@@ -756,6 +1893,14 @@ function getDrawnMod(object, skipList){
   let chara=savedChars[activeChar];
   let sheet=chara.charSheets[chara.activeSheet];
   let draggables=sheet.draggables;
+  let bonusList=JSON.parse(localStorage.getItem("bonusTypes"));
+  let bonusTypes=Object.entries(bonusList);
+  let toggleBoons={};
+  let toggleLedger=Object.values(object.toggleEffects);
+
+
+
+
 
   if (!skipList){
     skipList=[];
@@ -764,41 +1909,90 @@ function getDrawnMod(object, skipList){
   let totalMod=0;
 
   object.drawsFrom.forEach(function(source){
-
     let sourceObj=draggables[source[0]];
+    if (!sourceObj){
+      return;
+    }
     if (skipList.indexOf(sourceObj.id)>-1){
-      alert(`Hey there, this is a message from Higgsy's Charsheet.  There seems to be an infinite loop going on involving draggable: "${sourceObj.uiName}".  This likely means that its been set to draw from another draggable that, somewhere down the line, draws from the original draggable again.  If you got this message it's likely a bug since we're supposed to prevent these loops from happening in the first place so please let me know (contact info in credits) and I'll get it fixed asap.  For now I've short-circuited the loop but this may have jumbled some of the math on your sheet.  This error will likely pop up at least one additional tme with the name of the draggable it's looping with.  Sorry about this, please don't tell Higgsy.  `);
+      alert(`Hey there, this is a message from Higgsy's Charsheet.  There seems to be an infinite loop going on involving draggable: "${sourceObj.uiName}".  This likely means that its been set to draw from another draggable that, somewhere down the line, draws from the original draggable again.  If you got this message it's likely a bug since we're supposed to prevent these loops from happening in the first place so please let me know (contact info in credits) and I'll get it fixed asap.  For now I've short-circuited the loop but this may have jumbled some of the math on your sheet.  This error will likely pop up at least one additional time with the name of the draggable it's looping with.  Sorry about this, please don't tell Higgsy.  `);
       return totalMod;
     }
 
     let drawnAmount=0;
     //check if sourceObj has to draw from anything itself.
-    if(sourceObj.drawsFrom.length>0 && !isNaN(sourceObj.value)){
+
+    if(!isNaN(sourceObj.value)){
       skipList.push(object.id);
-      sourceObj.finalMod=sourceObj.value+getDrawnMod(sourceObj, skipList);
-    }
-    else{
-      sourceObj.finalMod=sourceObj.value;
+
+      sourceObj.finalMod=parseInt(sourceObj.value)+getDrawnMod(sourceObj, skipList);
     }
 
-    drawnAmount=(sourceObj.finalMod*source[1]);
+
+    // if(sourceObj.drawsFrom.length>0 && !isNaN(sourceObj.value)){
+    //   skipList.push(object.id);
+    //
+    //   sourceObj.finalMod=parseInt(sourceObj.value)+getDrawnMod(sourceObj, skipList);
+    // }
+    // else{
+    //   sourceObj.finalMod=sourceObj.value;
+    // }
+
+
+
+
 
     if (sourceObj.activeRules.indexOf("abilityScore")>-1){
-      drawnAmount=Math.floor(drawnAmount/2)-5;
+      drawnAmount=Math.floor(parseInt(sourceObj.finalMod)/2)-5;
+      drawnAmount*=parseFloat(source[1]);
+
       //this is because while we store the final mod of ability scores as the raw number the actual modifier they offer is a bit odd in pathfinder.  10-11 is neutral, 12-13 is +1, 8-9 is -1, 6-7 is -2 and so and and so forth.
     }
+    else{
+      drawnAmount=(parseInt(sourceObj.finalMod)*parseFloat(source[1]));
+
+    }
+
 
 
 
     totalMod+=drawnAmount;
+
   });
 
 
-  if (object.value>0  && object.activeRules.indexOf("classSkill")>-1 ){
 
+  if (object.value>0  && object.activeRules.indexOf("classSkill")>-1 ){
     totalMod+=3;
     //this is because class skills in pathfinder offer a +3 if at least one rank is applied to it
   }
+
+
+
+  for (let i=0; i<bonusTypes.length;i++){
+      toggleBoons[bonusTypes[i][0]] = 0;
+    }
+
+  if (toggleLedger){
+      for (let i=0; i<toggleLedger.length;i++){
+        let effectMod=toggleLedger[i][0][0];
+        let effectType=toggleLedger[i][0][1];
+
+        if (bonusList[effectType].stackable){
+          toggleBoons[effectType]+=effectMod;
+        }
+        else if(effectMod>toggleBoons[effectType]){
+            toggleBoons[effectType]=effectMod;
+        }
+      }
+    }
+
+
+  toggleBoons=Object.values(toggleBoons);
+  for (let i=0; i<toggleBoons.length;i++){
+    totalMod+=parseInt(toggleBoons[i]);
+  }
+
+
 
   return totalMod;
 
