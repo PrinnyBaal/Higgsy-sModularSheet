@@ -5,10 +5,10 @@ function loadStorage(defaultCharSheet){
     "id":0,
     "activeSheet":0,
     "activePage":0,
-    "totalPages":1,
+    "totalPages":7,
     "activeToggleBar":0,
-    "toggleBarTitles":["New ToggleBar"],
-    "totalToggleBars":1
+    "toggleBarTitles":["Sample Spell-effects", "Sample Gear"],
+    "totalToggleBars":2
   };
   //setting up local Storage after a reset
   let savedChars=[defaultCharInfo];
